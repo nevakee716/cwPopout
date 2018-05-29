@@ -1,0 +1,21 @@
+{
+  "name": "cwExpandablePopout",
+  "description": "Allow you to expand the popout",
+  "version": "0.0.0",
+  "main": "CwPopout.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JGrndn/cwExpandablePopout"
+  },
+  "author": "Jerome GRONDIN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JGrndn/cwExpandablePopout/issues"
+  },
+  "homepage": "",
+  "wiki": "https://github.com/JGrndn/cwExpandablePopout/wiki",
+  "evolve-version": "4.0 - 4.2"
+}
