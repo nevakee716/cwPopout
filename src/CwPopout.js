@@ -32,7 +32,7 @@
             o.push('<div class="popout-top-buttons" id="popout-top-buttons"></div>');
             o.push('</li>');
             o.push('</ul></div>');
-            o.push('<div class="popout-content">');
+            o.push('<div id="popout-content" class="popout-content">');
             o.push('</div>');
             o.push('</div>');
             $('#content').prepend(o.join(''));
