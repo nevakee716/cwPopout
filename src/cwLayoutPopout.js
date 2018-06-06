@@ -1,6 +1,6 @@
 (function (cwApi) {
   "use strict";
-  
+
   cwApi.cwDiagramPopoutHelper = {
     openDiagramPopout: function (cwObject, diagramPopout, callback, popoutOptions) {
       var jsonFile, schema, that = this;
@@ -11,14 +11,14 @@
           if (cwApi.isFunction(cwCustomerSiteActions[diagramPopout])) {
             cwCustomerSiteActions[diagramPopout](cwObject, diagramPopout, data, that);
           } else {
-            var i=0, o, rootNodeSchema, rootLayout, title, _views={};
+            var i = 0, o, rootNodeSchema, rootLayout, title, _views = {};
             rootNodeSchema = cwApi.ViewSchemaManager.getFirstRootNodeSchemaForView(schema);
             rootLayout = new cwApi.cwLayouts[rootNodeSchema.LayoutName](rootNodeSchema.LayoutOptions);
             title = rootLayout.getDisplayItem(data, true);
-            
+
             cwApi.CwPopout.showPopout(title, undefined, popoutOptions);
-            if (schema.Tab && schema.Tab.Tabs && schema.Tab.Tabs.length){
-              for (i = 0; i < schema.Tab.Tabs.length; i+=1){
+            if (schema.Tab && schema.Tab.Tabs && schema.Tab.Tabs.length) {
+              for (i = 0; i < schema.Tab.Tabs.length; i += 1) {
                 let tab = schema.Tab.Tabs[i];
                 o = [];
                 cwApi.cwDisplayManager.outputSortedChildren(o, schema, tab.SortedChildren, data);
@@ -26,7 +26,7 @@
                   htmlContent: o.join(''),
                   id: tab.Id,
                   name: tab.Name,
-                  isSelected: i===0 ? true:false
+                  isSelected: i === 0 ? true : false
                 };
               }
             } else {
@@ -34,37 +34,52 @@
                 htmlContent: cwApi.cwDisplayManager.appendContentNoTab(schema, diagramPopout, data).join(''),
                 id: 'tab0',
                 name: 'tab0',
-                isSelected:true
+                isSelected: true
               };
             }
 
             cwApi.CwAsyncLoader.load('angular', function () {
-              var loader = cwApi.CwAngularLoader, templatePath, $container = $('#popout-content');
+              var loader = cwApi.CwAngularLoader, templatePath, $container = $('#popout-content'), templateLoaded = false;
               loader.setup();
               templatePath = cwApi.format('{0}/html/{1}/{2}.ng.html', cwApi.getCommonContentPath(), 'CwPopout', 'cwPopoutContent');
-              loader.loadControllerWithTemplate('cwPopoutManager', $container, templatePath, function ($scope, $sce) {
+              loader.loadControllerWithTemplate('cwPopoutManager', $container, templatePath, function ($scope, $sce, $timeout) {
+                $scope.viewName = diagramPopout;
                 $scope.views = _views;
                 $scope.nbOfViews = i;
-                $scope.displayTrusted = function(text){
+                $scope.displayTrusted = function (text) {
                   return $sce.trustAsHtml(text);
                 };
 
-                $scope.displayTabContent = function(id){
+                $scope.displayTabContent = function (id) {
                   var k;
-                  for(k in $scope.views){
-                    if ($scope.views.hasOwnProperty(k)){
+                  for (k in $scope.views) {
+                    if ($scope.views.hasOwnProperty(k)) {
                       $scope.views[k].isSelected = (id == $scope.views[k].id);
                     }
                   }
                 };
+
+                $scope.$on('ngRepeatFinishedTab', function (e) {
+                  $scope.TabLoaded = true;
+                  $scope.doCallback();
+                });
+                $scope.$on('ngRepeatFinishedView', function (e) {
+                  $scope.viewLoaded = true;
+                  $scope.doCallback();
+                });
+
+                $scope.doCallback = function () {
+                  if ($scope.TabLoaded && $scope.viewLoaded) {
+                    if (callback === undefined) {
+                      cwApi.cwSiteActions.doActionsForSingle(true);
+                    } else {
+                      return callback && callback();
+                    }
+                  }
+                };
+
               });
             });
-
-            if (callback === undefined) {
-              cwApi.cwSiteActions.doActionsForSingle(true);
-            } else {
-              return callback && callback();
-            }
           }
         }
       });

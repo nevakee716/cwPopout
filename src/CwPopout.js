@@ -47,10 +47,10 @@
             });
         };
 
-        registerForToggleExpand = function(identifier){
-            $(document).off('click', identifier).on('click', identifier, function(e){
+        registerForToggleExpand = function (identifier) {
+            $(document).off('click', identifier).on('click', identifier, function (e) {
                 e.preventDefault();
-                if ($('.popout').hasClass('popout-expanded')){
+                if ($('.popout').hasClass('popout-expanded')) {
                     collapsePopout();
                 } else {
                     expandPopout();
@@ -58,14 +58,14 @@
             });
         }
 
-        collapsePopout = function(){
+        collapsePopout = function () {
             $('.popout').removeClass('popout-expanded');
         };
 
-        expandPopout = function(){
+        expandPopout = function () {
             $('.popout').addClass(' popout-expanded');
         };
-        
+
         registerElementForToggle = function (identifier, title, callback) {
             $(document).off('click', identifier).on('click', identifier, function (e) {
                 e.preventDefault();

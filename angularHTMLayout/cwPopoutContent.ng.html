@@ -1,8 +1,9 @@
-<div class="cwPopoutTemplateContent" ng-controller="cwPopoutManager">
+<div class="cw-diagram-popout-container" ng-controller="cwPopoutManager" ng-class="viewName">
   <div id="tabs-region" class="tabs-region" ng-if="nbOfViews > 0">
     <div class="tabs-container">
       <ul class="list-tabs">
-        <li class="tab tab-left" ng-repeat="(k, v) in views" id="popout-tab-{{k}}" ng-click="displayTabContent(k)" ng-class="{'tab-active': v.isSelected == true}">
+        <li class="tab item-tab" ng-repeat="(k, v) in views" on-finish-render="ngRepeatFinishedTab" id="popout-tab-{{k}}" ng-click="displayTabContent(k)"
+          ng-class="{'tab-active': v.isSelected}">
           <span class="tab-item">
             <i class="tab-icon"></i>
             <span class="tab-title">
@@ -15,7 +16,8 @@
   </div>
   <div id="view-regions" class="view-region">
     <div class="view-container">
-      <div class="list-view" ng-repeat="(k, v) in views" ng-if="v.isSelected" ng-bind-html="displayTrusted(v.htmlContent)">
+      <div class="list-view item-view" ng-repeat="(k, v) in views" on-finish-render="ngRepeatFinishedView" ng-class="{'cw-hidden': !v.isSelected}"
+        ng-bind-html="displayTrusted(v.htmlContent)">
       </div>
     </div>
   </div>
