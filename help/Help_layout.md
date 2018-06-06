@@ -40,7 +40,7 @@
   
   <meta name="pjax-timeout" content="1000">
   
-  <meta name="request-id" content="8F71:3F5F:C9F4D0:16B4869:5B16F71C" data-pjax-transient>
+  <meta name="request-id" content="D9C1:3F5F:14C9B79:25528FC:5B17C9D3" data-pjax-transient>
 
 
   
@@ -52,7 +52,7 @@
   <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
     <meta name="google-analytics" content="UA-3769691-2">
 
-<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="8F71:3F5F:C9F4D0:16B4869:5B16F71C" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
+<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="D9C1:3F5F:14C9B79:25528FC:5B17C9D3" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" />
 
 
@@ -67,13 +67,13 @@
     <meta name="user-login" content="">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="ZTBlOWM5ZTkyNjUyMGMwYWIzMWUwNGYxZDZmOTgwZjVlYjk3OTUxOGIwMTc3MTcxYjczNDg5YmViZjA3ZDA0ZHx7InJlbW90ZV9hZGRyZXNzIjoiODkuOTAuMTU4LjEwOCIsInJlcXVlc3RfaWQiOiI4RjcxOjNGNUY6QzlGNEQwOjE2QjQ4Njk6NUIxNkY3MUMiLCJ0aW1lc3RhbXAiOjE1MjgyMzE3MTIsImhvc3QiOiJnaXRodWIuY29tIn0=">
+    <meta name="js-proxy-site-detection-payload" content="YjY0MTcwZTZmZDkzZGViZTczNDNjNjdhMDg0NDVmNTFlMTNhNWM4N2Y3MDFjMzcyMzlhM2MwZGE3NDI0MzA1N3x7InJlbW90ZV9hZGRyZXNzIjoiODkuOTAuMTU4LjEwOCIsInJlcXVlc3RfaWQiOiJEOUMxOjNGNUY6MTRDOUI3OToyNTUyOEZDOjVCMTdDOUQzIiwidGltZXN0YW1wIjoxNTI4Mjg1NjU0LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
 
     <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES,DIFF_EDIT_HISTORY">
 
-  <meta name="html-safe-nonce" content="83eed0070709c98199eb5c073e2ef51b61e24314">
+  <meta name="html-safe-nonce" content="c36bda4456616a1c65a3824bb716ca2003b9025a">
 
-  <meta http-equiv="x-pjax-version" content="a76419c442cda806f1178dbe6892457d">
+  <meta http-equiv="x-pjax-version" content="64f6bfae9ab30404f69a3d0b4172adae">
   
 
       <link href="https://github.com/JGrndn/cwPopout/commits/master.atom" rel="alternate" title="Recent Commits to cwPopout:master" type="application/atom+xml">
@@ -130,7 +130,7 @@
   Microsoft is acquiring GitHub! <a href="https://blog.github.com/2018-06-04-github-microsoft/" class="text-bold text-white" data-ga-click="MS banner, click, link - text:Read our blog">Read our blog</a> and <a href="https://blogs.microsoft.com/?p=52553832" class="text-bold text-white" data-ga-click="MS banner, click, link - text:Satya Nadella's post">Satya Nadella's post</a> to learn more.
 </div>
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="order-md-last" action="/site/dismiss_banner" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="L35gQWO5dNL18o5gPOp7gbhVs+4/jQHt+UkCfF9xPv7O6lx/lBe/DkdesvE9c9b+SGrtPU2LMhuzNbfAIY1f8w==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="order-md-last" action="/site/dismiss_banner" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ng3cAj+b2+5+Ki4nP0W3IHkh6+uOsE6KaPusMb3E+tYPIk+0nEgtksxwAkKk5siLLFcEJoPF2G8vItv2pOnX0g==" />
           <button type="submit" class="btn-link text-white p-2 ml-1" data-ga-click="MS banner, click, dismiss (logged out)">
             <svg height="16" class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
             <span class="sr-only">Dismiss</span>
@@ -323,7 +323,7 @@
     <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /JGrndn/cwPopout/projects" href="/JGrndn/cwPopout/projects">
       <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
       Projects
-      <span class="Counter" >0</span>
+      <span class="Counter" >1</span>
 </a>
 
 
@@ -344,7 +344,7 @@
       <div class="signup-prompt-bg rounded-1">
       <div class="signup-prompt p-4 text-center mb-4 rounded-1">
         <div class="position-relative">
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="l2L2sTm8qVH3C4vwknkFJk2jALIu85FNtc+rXeZWsaVn9IjA9Se2/ACUROF6uHWWZJMt/Jt157Qq7aka8v/4kg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="m9ILFIU8ZPhsr5ASYfqC/vyoQrZDypOvZzIpqKXyS+/G8IUKc9HW0S8pawquxs7RTd7o1uXptLdli4/+vYhHYw==" />
             <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
               Dismiss
             </button>
@@ -381,7 +381,7 @@
           <a data-pjax href="/JGrndn/cwPopout/commits/master">
               <svg class="octicon octicon-history" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 13H6V6h5v2H8v5zM7 1C4.81 1 2.87 2.02 1.59 3.59L0 2v4h4L2.5 4.5C3.55 3.17 5.17 2.3 7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-.34.03-.67.09-1H.08C.03 7.33 0 7.66 0 8c0 3.86 3.14 7 7 7s7-3.14 7-7-3.14-7-7-7z"/></svg>
               <span class="num text-emphasized">
-                7
+                10
               </span>
               commits
           </a>
@@ -407,15 +407,13 @@
         </li>
 
         <li>
-            <a href="/JGrndn/cwPopout/graphs/contributors">
-  <svg class="octicon octicon-organization" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 12.999c0 .439-.45 1-1 1H7.995c-.539 0-.994-.447-.995-.999H1c-.54 0-1-.561-1-1 0-2.634 3-4 3-4s.229-.409 0-1c-.841-.621-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.442.58 2.5 3c.058 2.41-.159 2.379-1 3-.229.59 0 1 0 1s1.549.711 2.42 2.088C9.196 9.369 10 8.999 10 8.999s.229-.409 0-1c-.841-.62-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.437.581 2.495 3c.059 2.41-.158 2.38-1 3-.229.59 0 1 0 1s3.005 1.366 3.005 4z"/></svg>
-    <span class="num text-emphasized">
-      1
-    </span>
-    contributor
-</a>
-
-        </li>
+            <include-fragment src="/JGrndn/cwPopout/contributors_size">
+              <a href="/JGrndn/cwPopout/graphs/contributors">
+                <svg class="octicon octicon-organization" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 12.999c0 .439-.45 1-1 1H7.995c-.539 0-.994-.447-.995-.999H1c-.54 0-1-.561-1-1 0-2.634 3-4 3-4s.229-.409 0-1c-.841-.621-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.442.58 2.5 3c.058 2.41-.159 2.379-1 3-.229.59 0 1 0 1s1.549.711 2.42 2.088C9.196 9.369 10 8.999 10 8.999s.229-.409 0-1c-.841-.62-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.437.581 2.495 3c.059 2.41-.158 2.38-1 3-.229.59 0 1 0 1s3.005 1.366 3.005 4z"/></svg>
+                <span class="num text-emphasized"></span>
+                Fetching contributors
+              </a>
+</include-fragment>        </li>
           <li>
             <a href="/JGrndn/cwPopout/blob/master/LICENSE">
               <svg class="octicon octicon-law" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 4c-.83 0-1.5-.67-1.5-1.5S6.17 1 7 1s1.5.67 1.5 1.5S7.83 4 7 4zm7 6c0 1.11-.89 2-2 2h-1c-1.11 0-2-.89-2-2l2-4h-1c-.55 0-1-.45-1-1H8v8c.42 0 1 .45 1 1h1c.42 0 1 .45 1 1H3c0-.55.58-1 1-1h1c0-.55.58-1 1-1h.03L6 5H5c0 .55-.45 1-1 1H3l2 4c0 1.11-.89 2-2 2H2c-1.11 0-2-.89-2-2l2-4H1V5h3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1h3v1h-1l2 4zM2.5 7L1 10h3L2.5 7zM13 10l-1.5-3-1.5 3h3z"/></svg>
@@ -430,21 +428,21 @@
                 <a href="/JGrndn/cwPopout/search?l=javascript"  data-ga-click="Repository, language stats search click, location:repo overview">
                   <span class="color-block language-color" style="background-color:#f1e05a;"></span>
                   <span class="lang">JavaScript</span>
-                  <span class="percent">81.8%</span>
+                  <span class="percent">81.2%</span>
                 </a>
             </li>
             <li>
                 <a href="/JGrndn/cwPopout/search?l=css"  data-ga-click="Repository, language stats search click, location:repo overview">
                   <span class="color-block language-color" style="background-color:#563d7c;"></span>
                   <span class="lang">CSS</span>
-                  <span class="percent">13.0%</span>
+                  <span class="percent">13.3%</span>
                 </a>
             </li>
             <li>
                 <a href="/JGrndn/cwPopout/search?l=html"  data-ga-click="Repository, language stats search click, location:repo overview">
                   <span class="color-block language-color" style="background-color:#e34c26;"></span>
                   <span class="lang">HTML</span>
-                  <span class="percent">5.2%</span>
+                  <span class="percent">5.5%</span>
                 </a>
             </li>
           </ol>
@@ -454,9 +452,9 @@
   </div>
 
     <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details" data-ga-click="Repository, language bar stats toggle, location:repo overview">
-      <span class="language-color" aria-label="JavaScript 81.8%" style="width:81.8%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
-      <span class="language-color" aria-label="CSS 13.0%" style="width:13.0%; background-color:#563d7c;" itemprop="keywords">CSS</span>
-      <span class="language-color" aria-label="HTML 5.2%" style="width:5.2%; background-color:#e34c26;" itemprop="keywords">HTML</span>
+      <span class="language-color" aria-label="JavaScript 81.2%" style="width:81.2%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
+      <span class="language-color" aria-label="CSS 13.3%" style="width:13.3%; background-color:#563d7c;" itemprop="keywords">CSS</span>
+      <span class="language-color" aria-label="HTML 5.5%" style="width:5.5%; background-color:#e34c26;" itemprop="keywords">HTML</span>
     </div>
 
 
@@ -627,7 +625,7 @@
 
   
 
-<include-fragment src="/JGrndn/cwPopout/tree-commit/aae68179771cee131296acb70aa92595e66f8db8" class="commit-tease commit-loader">
+<include-fragment src="/JGrndn/cwPopout/tree-commit/4b5ec65ceb3fa2772ef8ab7b6f652dcee3cd32f8" class="commit-tease commit-loader">
   <div class="blank">
     <img alt="" class="loader" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
     Fetching latest commit…
@@ -640,7 +638,7 @@
 
 <div class="file-wrap">
 
-  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/JGrndn/cwPopout/tree/aae68179771cee131296acb70aa92595e66f8db8">Permalink</a>
+  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/JGrndn/cwPopout/tree/4b5ec65ceb3fa2772ef8ab7b6f652dcee3cd32f8">Permalink</a>
 
   <table class="files js-navigation-container js-active-navigation-container" data-pjax>
 
@@ -657,17 +655,17 @@
             <img width="16" height="16" class="spinner" alt="" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" />
           </td>
           <td class="content">
-            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="angularHTMLayout" id="e5b9765a96444f8e52ceb2d41fa5b211-4ece7adaf7cd1b7b1c8e6fb9b7866683dcdb2e73" href="/JGrndn/cwPopout/tree/master/angularHTMLayout">angularHTMLayout</a></span>
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="angularHTMLayout" id="e5b9765a96444f8e52ceb2d41fa5b211-b28fe6c543056cadd020342f13dd5d0c8889d2f9" href="/JGrndn/cwPopout/tree/master/angularHTMLayout">angularHTMLayout</a></span>
           </td>
           <td class="message">
             <span class="css-truncate css-truncate-target">
                   
-<span class="issue-keyword tooltipped tooltipped-se" aria-label="This commit closes issue #1."><a data-pjax="true" title="Fix #1" class="message" href="/JGrndn/cwPopout/commit/aae68179771cee131296acb70aa92595e66f8db8">Fix</a></span> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="329618836" data-permission-text="Issue title is private" data-url="https://github.com/JGrndn/cwPopout/issues/1" href="https://github.com/JGrndn/cwPopout/issues/1">#1</a>
+<span class="issue-keyword tooltipped tooltipped-se" aria-label="This commit closes issue #1."><a data-pjax="true" title="Fix #1" class="message" href="/JGrndn/cwPopout/commit/4b5ec65ceb3fa2772ef8ab7b6f652dcee3cd32f8">Fix</a></span> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="329618836" data-permission-text="Issue title is private" data-url="https://github.com/JGrndn/cwPopout/issues/1" href="https://github.com/JGrndn/cwPopout/issues/1">#1</a>
 
             </span>
           </td>
           <td class="age">
-            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-06-05T20:47:57Z">Jun 5, 2018</time-ago></span>
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-06-06T11:47:11Z">Jun 6, 2018</time-ago></span>
           </td>
         </tr>
         <tr class="js-navigation-item">
@@ -676,15 +674,15 @@
             <img width="16" height="16" class="spinner" alt="" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" />
           </td>
           <td class="content">
-            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="dist" id="2a6d07eef8b10b84129b42424ed99327-46ef23aa2e91f9a61ae7bd17bfb743ef036d409e" href="/JGrndn/cwPopout/tree/master/dist">dist</a></span>
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="dist" id="2a6d07eef8b10b84129b42424ed99327-0573d8fd96d9b7c1f1a11f1231e949753da33a3c" href="/JGrndn/cwPopout/tree/master/dist">dist</a></span>
           </td>
           <td class="message">
             <span class="css-truncate css-truncate-target">
-                  <a data-pjax="true" title="New repo name" class="message" href="/JGrndn/cwPopout/commit/674a5aea918f5fe293b2ed5369bfd4d6f3f8083b">New repo name</a>
+                  <a data-pjax="true" title="new package" class="message" href="/JGrndn/cwPopout/commit/955a7c7168d895931e40728a3f9bdc5dd8c137f1">new package</a>
             </span>
           </td>
           <td class="age">
-            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-05-29T11:53:16Z">May 29, 2018</time-ago></span>
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-06-05T20:54:29Z">Jun 5, 2018</time-ago></span>
           </td>
         </tr>
         <tr class="js-navigation-item">
@@ -693,15 +691,15 @@
             <img width="16" height="16" class="spinner" alt="" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" />
           </td>
           <td class="content">
-            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="help" id="657f8b8da628ef83cf69101b6817150a-2128c0f12b8d824fe923af236afc319d7e2a2c12" href="/JGrndn/cwPopout/tree/master/help">help</a></span>
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="help" id="657f8b8da628ef83cf69101b6817150a-d9757c93b6cef895460a6cf12d2ea11dc14b83e5" href="/JGrndn/cwPopout/tree/master/help">help</a></span>
           </td>
           <td class="message">
             <span class="css-truncate css-truncate-target">
-                  <a data-pjax="true" title="New repo name" class="message" href="/JGrndn/cwPopout/commit/674a5aea918f5fe293b2ed5369bfd4d6f3f8083b">New repo name</a>
+                  <a data-pjax="true" title="new package" class="message" href="/JGrndn/cwPopout/commit/955a7c7168d895931e40728a3f9bdc5dd8c137f1">new package</a>
             </span>
           </td>
           <td class="age">
-            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-05-29T11:53:16Z">May 29, 2018</time-ago></span>
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-06-05T20:54:29Z">Jun 5, 2018</time-ago></span>
           </td>
         </tr>
         <tr class="js-navigation-item">
@@ -710,17 +708,17 @@
             <img width="16" height="16" class="spinner" alt="" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" />
           </td>
           <td class="content">
-            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="src" id="25d902c24283ab8cfbac54dfa101ad31-5e093056ada65f34147d0f85f51e6b7e917a6365" href="/JGrndn/cwPopout/tree/master/src">src</a></span>
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="src" id="25d902c24283ab8cfbac54dfa101ad31-bcdb1b8f4eed71b6e3380f401074298aaef80944" href="/JGrndn/cwPopout/tree/master/src">src</a></span>
           </td>
           <td class="message">
             <span class="css-truncate css-truncate-target">
                   
-<span class="issue-keyword tooltipped tooltipped-se" aria-label="This commit closes issue #1."><a data-pjax="true" title="Fix #1" class="message" href="/JGrndn/cwPopout/commit/aae68179771cee131296acb70aa92595e66f8db8">Fix</a></span> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="329618836" data-permission-text="Issue title is private" data-url="https://github.com/JGrndn/cwPopout/issues/1" href="https://github.com/JGrndn/cwPopout/issues/1">#1</a>
+<span class="issue-keyword tooltipped tooltipped-se" aria-label="This commit closes issue #1."><a data-pjax="true" title="Fix #1" class="message" href="/JGrndn/cwPopout/commit/4b5ec65ceb3fa2772ef8ab7b6f652dcee3cd32f8">Fix</a></span> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="329618836" data-permission-text="Issue title is private" data-url="https://github.com/JGrndn/cwPopout/issues/1" href="https://github.com/JGrndn/cwPopout/issues/1">#1</a>
 
             </span>
           </td>
           <td class="age">
-            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-06-05T20:47:57Z">Jun 5, 2018</time-ago></span>
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-06-06T11:47:11Z">Jun 6, 2018</time-ago></span>
           </td>
         </tr>
         <tr class="js-navigation-item">
@@ -763,15 +761,15 @@
             <img width="16" height="16" class="spinner" alt="" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" />
           </td>
           <td class="content">
-            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="package.json" id="b9cfc7f2cdf78a7f4b91a753d10865a2-5c3c81d6f2adb11d12b8fdc3821626ab841823d5" href="/JGrndn/cwPopout/blob/master/package.json">package.json</a></span>
+            <span class="css-truncate css-truncate-target"><a class="js-navigation-open" title="package.json" id="b9cfc7f2cdf78a7f4b91a753d10865a2-68b0883b770a777116360d185990aa5b882f9435" href="/JGrndn/cwPopout/blob/master/package.json">package.json</a></span>
           </td>
           <td class="message">
             <span class="css-truncate css-truncate-target">
-                  <a data-pjax="true" title="1.0.1" class="message" href="/JGrndn/cwPopout/commit/f9729d7816f54ca894a45eff4f5124ad4e0b65b7">1.0.1</a>
+                  <a data-pjax="true" title="1.1.0" class="message" href="/JGrndn/cwPopout/commit/4999b919d278dcc67907183043b68d6bd945d120">1.1.0</a>
             </span>
           </td>
           <td class="age">
-            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-05-29T11:52:00Z">May 29, 2018</time-ago></span>
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-06-05T20:48:24Z">Jun 5, 2018</time-ago></span>
           </td>
         </tr>
     </tbody>
@@ -797,7 +795,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.21992s from unicorn-24857770-63tf6">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.24646s from unicorn-8645b88d7c-697hq">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
@@ -835,9 +833,9 @@
 
 
     <script crossorigin="anonymous" integrity="sha512-MWhu3P7Ss2c8wk/fvHCiNZ3LNVjHP4kaHYeO7xXrYQ1lt3MODm9jla1+FhjKVzoXk64jc05569Ia9K3Zq0Fd9Q==" type="application/javascript" src="https://assets-cdn.github.com/assets/compat-1c66c88316e8e9eacfac51af6ff01eac.js"></script>
-    <script crossorigin="anonymous" integrity="sha512-AXB5uvqVLMu/B20TeXymJJqRy2a2tBXzS3zftf+O07G2q23cFfuBp4SEKwsTXi8ANNYvsfiCzboRJ0gGi2YmZg==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-a2e17e1bb4b33f83985c8bddfee72bc7.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-rTmClkyJxuWVxD3HuXtPq/5kD0857EfJF77T++HayvDGIYtxo5/ctJc8dYwYj/wSbAU4pD6iSTbLDMs8uNVtlQ==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-10f86fbecbc74b507bd240fe66202501.js"></script>
     
-    <script crossorigin="anonymous" async="async" integrity="sha512-PuuSB2iPFmWZD8f0oy0FimP3SsPymGiLuKObet8fkhIFxztIEffMTSRw3QE6iDpuPz9G+XjkrnNyMHTDlPngZw==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-1aca647b1b00f7a018647d08bbd3f843.js"></script>
+    <script crossorigin="anonymous" async="async" integrity="sha512-GUvx2mdAzZKOLSK4QskuvtTKf+XBV/bVprToD6Cu8x/34q/sEqgzM25Y8Ub420CabARJ18V0g2BByiG0k1NucA==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-955b112c1151687eb03f0a2c2583210d.js"></script>
     
     
     
