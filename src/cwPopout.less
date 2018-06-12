@@ -86,15 +86,16 @@
 }
 
 
-
-.cw-diagram-popout-container {
+.view-region > div {
     display: flex;
     flex-wrap: wrap;
     > div {
+        display: flex;
+        flex-wrap: wrap;
         width: 100%;
     }
-    .property-box-asso, .property-box {
-        width: 400px;
+    .property-box-asso, .property-box, .cwPropertiesTableContainer {
+        width: 600px;
         margin-right: 2%;
     }
 }
