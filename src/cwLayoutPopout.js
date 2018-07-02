@@ -70,6 +70,7 @@
 
                 $scope.doCallback = function () {
                   if ($scope.TabLoaded && $scope.viewLoaded) {
+                    cwApi.cwDisplayManager.enableBehaviours(schema, data, false);
                     if (callback === undefined) {
                       cwApi.cwSiteActions.doActionsForSingle(true);
                     } else {

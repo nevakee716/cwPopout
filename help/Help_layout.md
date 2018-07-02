@@ -19,7 +19,11 @@
 
 
   <link crossorigin="anonymous" media="all" integrity="sha512-PkbtxdWDpLChpxtWQ0KbvJoef4XMYPq5pfd/ZmylYZTzXYpCfGwN9d+bsSKcmOJLwTkfjFkfj5wz3poDrhJoSQ==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-f6e6ce21346c0d2eb22def1e8534afcb.css" />
+<<<<<<< HEAD
   <link crossorigin="anonymous" media="all" integrity="sha512-wc7uG2mC8vRiCzJDGQQjnregy4hSJxRvruTODEt3c/dkjUJkez676cbe/Xs32hargWWwc5+oCcmNDwjrQ5KRtg==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-d926197a7de5dd3cf6f883cedab9c630.css" />
+=======
+  <link crossorigin="anonymous" media="all" integrity="sha512-EuadCD9/LFVfed/klpP7kj+qTP0hWhyJ9KN6kLBEXRSLjXEKjm4Z4JORqgppbiE/toxjWa60Fjsh9BtIJdLq9g==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-6353b64247f8dd959d2b123ae98fba98.css" />
+>>>>>>> 8606e092cfa64ae57a5ce36b3abb0f678e9487dd
   
   
   <link crossorigin="anonymous" media="all" integrity="sha512-zyxweUSm/NG+juywqcMFSS4HbKjLWCZyEM2JjoCqnQUU6RVrHpHMwH66xreiaeMIRoA6vYuk0hm8S1X42r/YWQ==" rel="stylesheet" href="https://assets-cdn.github.com/assets/site-220df28424b63d1e24f3bd909efebe81.css" />
@@ -40,7 +44,11 @@
   
   <meta name="pjax-timeout" content="1000">
   
+<<<<<<< HEAD
   <meta name="request-id" content="2594:5D92:1A575A5:3492106:5B190B28" data-pjax-transient>
+=======
+  <meta name="request-id" content="73E9:6D05:5ADF97:AB04E3:5B1F9BAA" data-pjax-transient>
+>>>>>>> 8606e092cfa64ae57a5ce36b3abb0f678e9487dd
 
 
   
@@ -52,7 +60,11 @@
   <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
     <meta name="google-analytics" content="UA-3769691-2">
 
+<<<<<<< HEAD
 <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="2594:5D92:1A575A5:3492106:5B190B28" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
+=======
+<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="73E9:6D05:5ADF97:AB04E3:5B1F9BAA" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
+>>>>>>> 8606e092cfa64ae57a5ce36b3abb0f678e9487dd
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" />
 
 
@@ -67,6 +79,7 @@
     <meta name="user-login" content="">
 
       <meta name="expected-hostname" content="github.com">
+<<<<<<< HEAD
     <meta name="js-proxy-site-detection-payload" content="MmI3ZTliM2U3MzMxNDlkNjAxN2NkMmUwMzJiMjVjY2VkYmU1MTk2NWE2ZGNhMWQ5NjU5MTFkOTVkMzljYjFiYXx7InJlbW90ZV9hZGRyZXNzIjoiMjEzLjI0NS40NS4xNTQiLCJyZXF1ZXN0X2lkIjoiMjU5NDo1RDkyOjFBNTc1QTU6MzQ5MjEwNjo1QjE5MEIyOCIsInRpbWVzdGFtcCI6MTUyODM2NzkxMiwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
 
     <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
@@ -74,6 +87,15 @@
   <meta name="html-safe-nonce" content="573fb85f29ac0c13a927ce5793979f4232f148da">
 
   <meta http-equiv="x-pjax-version" content="4e7b43a62c7d374cc495fa94aeb3d952">
+=======
+    <meta name="js-proxy-site-detection-payload" content="YTFjYjk1Nzc4ODllZDk0YWM1NDQ3YTU1ODg3ZWFjNTAwZmI3YzExMDRiNzY2YTlhM2E0NThkY2MyZWNkZjUwYXx7InJlbW90ZV9hZGRyZXNzIjoiODQuMjMzLjE0NC4xODYiLCJyZXF1ZXN0X2lkIjoiNzNFOTo2RDA1OjVBREY5NzpBQjA0RTM6NUIxRjlCQUEiLCJ0aW1lc3RhbXAiOjE1Mjg3OTgxMjUsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+    <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
+
+  <meta name="html-safe-nonce" content="dcfe2350ebb84405372e1019fc16539b8ce8177b">
+
+  <meta http-equiv="x-pjax-version" content="20d9bec307536519e5b0bc7ea8bbab87">
+>>>>>>> 8606e092cfa64ae57a5ce36b3abb0f678e9487dd
   
 
       <link href="https://github.com/JGrndn/cwPopout/commits/master.atom" rel="alternate" title="Recent Commits to cwPopout:master" type="application/atom+xml">
@@ -282,7 +304,7 @@
       <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /JGrndn/cwPopout/issues" href="/JGrndn/cwPopout/issues">
         <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
         <span itemprop="name">Issues</span>
-        <span class="Counter">0</span>
+        <span class="Counter">1</span>
         <meta itemprop="position" content="2">
 </a>    </span>
 
@@ -318,7 +340,11 @@
       <div class="signup-prompt-bg rounded-1">
       <div class="signup-prompt p-4 text-center mb-4 rounded-1">
         <div class="position-relative">
+<<<<<<< HEAD
           <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="G5+sekDGvTUDqcrOES0HuhzpO3rF9EY6c6kBxSzGjJbFkh+lWQJX7w6D4LT0TaWSbVktkBnMOtVxFjHJB6To6g==" />
+=======
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="4TYAV/cvgaS9r/BFXE68+Lduo5qK+E4wDJs6w0hjoYFN4nfFh+Mx76c0MZk6eeyH/qBFG6CwD8V45b2berPdEw==" />
+>>>>>>> 8606e092cfa64ae57a5ce36b3abb0f678e9487dd
             <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
               Dismiss
             </button>
@@ -384,9 +410,9 @@
             <a href="/JGrndn/cwPopout/graphs/contributors">
   <svg class="octicon octicon-organization" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 12.999c0 .439-.45 1-1 1H7.995c-.539 0-.994-.447-.995-.999H1c-.54 0-1-.561-1-1 0-2.634 3-4 3-4s.229-.409 0-1c-.841-.621-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.442.58 2.5 3c.058 2.41-.159 2.379-1 3-.229.59 0 1 0 1s1.549.711 2.42 2.088C9.196 9.369 10 8.999 10 8.999s.229-.409 0-1c-.841-.62-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.437.581 2.495 3c.059 2.41-.158 2.38-1 3-.229.59 0 1 0 1s3.005 1.366 3.005 4z"/></svg>
     <span class="num text-emphasized">
-      1
+      2
     </span>
-    contributor
+    contributors
 </a>
 
         </li>
@@ -432,6 +458,7 @@
       <span class="language-color" aria-label="CSS 13.6%" style="width:13.6%; background-color:#563d7c;" itemprop="keywords">CSS</span>
       <span class="language-color" aria-label="HTML 5.5%" style="width:5.5%; background-color:#e34c26;" itemprop="keywords">HTML</span>
     </div>
+
 
 
 
@@ -602,9 +629,15 @@
   
 
 <include-fragment src="/JGrndn/cwPopout/tree-commit/5e371e707511920a6ccdb8fdfe0a24957bec1975" class="commit-tease commit-loader">
+<<<<<<< HEAD
   <div class="blank">
     <img alt="" class="loader" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
     Fetching latest commit…
+=======
+  <div class="blank loader-loading">
+      <img alt="" class="loader" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
+      Fetching latest commit…
+>>>>>>> 8606e092cfa64ae57a5ce36b3abb0f678e9487dd
   </div>
   <div class="loader-error">
     Cannot retrieve the latest commit at this time.
@@ -769,7 +802,11 @@ information are display in a better way when expending the pop out" class="messa
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
+<<<<<<< HEAD
       <li class="mr-3">&copy; 2018 <span title="0.26945s from unicorn-3164225021-9zs33">GitHub</span>, Inc.</li>
+=======
+      <li class="mr-3">&copy; 2018 <span title="0.28851s from unicorn-3054389161-trpvp">GitHub</span>, Inc.</li>
+>>>>>>> 8606e092cfa64ae57a5ce36b3abb0f678e9487dd
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
@@ -806,10 +843,14 @@ information are display in a better way when expending the pop out" class="messa
   </div>
 
 
-    <script crossorigin="anonymous" integrity="sha512-MWhu3P7Ss2c8wk/fvHCiNZ3LNVjHP4kaHYeO7xXrYQ1lt3MODm9jla1+FhjKVzoXk64jc05569Ia9K3Zq0Fd9Q==" type="application/javascript" src="https://assets-cdn.github.com/assets/compat-1c66c88316e8e9eacfac51af6ff01eac.js"></script>
-    <script crossorigin="anonymous" integrity="sha512-rTmClkyJxuWVxD3HuXtPq/5kD0857EfJF77T++HayvDGIYtxo5/ctJc8dYwYj/wSbAU4pD6iSTbLDMs8uNVtlQ==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-10f86fbecbc74b507bd240fe66202501.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-AJroIDzeBTsez82UXWwVAmoSz2nKhws/uQvJ8aKfadJZcvL83MIXMjRYm7MVZaKSNXvifa/OGpn54kiDBKpyLw==" type="application/javascript" src="https://assets-cdn.github.com/assets/compat-37e9ce8318a51dd51033283da82c8546.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-dw6pJdMuGt8qWi9UIwXbz39kSg4xPIVSs8eH9s/wQ7rv3Qv293719SgZR3Ed+8/Au17JplVWepgHKk3XxJHReg==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-348dfac1ab5d915b75e0f0c823fd0bbb.js"></script>
     
+<<<<<<< HEAD
     <script crossorigin="anonymous" async="async" integrity="sha512-VZX5e2PAduVwKFBY5IaJk7Bg7BOI7vzsbneQ+XGdrvg4mXNNu7m1NIKRX7M4eFwjEXS49mZJQraPKwvXmDVzvw==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-5c1954d1915cc1eb4f0d7f0959ad2d35.js"></script>
+=======
+    <script crossorigin="anonymous" async="async" integrity="sha512-DHTuBUYNLGd7AJONSzgLEp6QdRNcG+9IHGMYXEPZLDostPkRBG23e/t61idVyS35xpsT1boql74nigxxHL7VFQ==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-570ef43e73a9c60f604a6f3068ac5436.js"></script>
+>>>>>>> 8606e092cfa64ae57a5ce36b3abb0f678e9487dd
     
     
     
