@@ -52,8 +52,10 @@
                 e.preventDefault();
                 if ($('.popout').hasClass('popout-expanded')) {
                     collapsePopout();
+                    cwApi.customLibs.popout.extended = false;
                 } else {
                     expandPopout();
+                    cwApi.customLibs.popout.extended = true;
                 }
             });
         }
@@ -156,6 +158,7 @@
                 intervalMoving = setInterval(duringAnimation, intervalDuringAnimationTime);
                 $('body').addClass('cw-moving');
             }
+            if(cwApi.customLibs.popout.extended === true) expandPopout();
             setTimeout(popoutShowed, transitionTime);
         };
 
@@ -272,6 +275,11 @@
             scrollContentToTop: scrollContentToTop
         };
 
+
     }());
+    
+    if(cwApi.customLibs === undefined ) cwApi.customLibs = {};
+    if(cwApi.customLibs.popout === undefined ) cwApi.customLibs.popout = {};
+    if(cwApi.customLibs.popout.views === undefined ) cwApi.customLibs.popout.views = {};
 
 }(cwAPI));

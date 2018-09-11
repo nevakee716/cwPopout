@@ -11,22 +11,25 @@
           if (cwApi.isFunction(cwCustomerSiteActions[diagramPopout])) {
             cwCustomerSiteActions[diagramPopout](cwObject, diagramPopout, data, that);
           } else {
-            var i = 0, o, rootNodeSchema, rootLayout, title, _views = {};
+            var i = 0, o, lastTab = 0,rootNodeSchema, rootLayout, title, _views = {};
             rootNodeSchema = cwApi.ViewSchemaManager.getFirstRootNodeSchemaForView(schema);
             rootLayout = new cwApi.cwLayouts[rootNodeSchema.LayoutName](rootNodeSchema.LayoutOptions);
             title = rootLayout.getDisplayItem(data, true);
 
             cwApi.CwPopout.showPopout(title, undefined, popoutOptions);
+            if(cwApi.customLibs.popout.views[diagramPopout]) lastTab = cwApi.customLibs.popout.views[diagramPopout];
             if (schema.Tab && schema.Tab.Tabs && schema.Tab.Tabs.length) {
               for (i = 0; i < schema.Tab.Tabs.length; i += 1) {
                 let tab = schema.Tab.Tabs[i];
+                let selected = false;
                 o = [];
                 cwApi.cwDisplayManager.outputSortedChildren(o, schema, tab.SortedChildren, data);
+                if(tab.Id === lastTab || lastTab === i) selected = true;
                 _views[tab.Id] = {
                   htmlContent: o.join(''),
                   id: tab.Id,
                   name: tab.Name,
-                  isSelected: i === 0 ? true : false
+                  isSelected: selected
                 };
               }
             } else {
@@ -55,6 +58,7 @@
                   for (k in $scope.views) {
                     if ($scope.views.hasOwnProperty(k)) {
                       $scope.views[k].isSelected = (id == $scope.views[k].id);
+                      cwApi.customLibs.popout.views[diagramPopout] = id;
                     }
                   }
                 };
