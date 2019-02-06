@@ -1,23 +1,30 @@
 <div class="cw-diagram-popout-container" ng-controller="cwPopoutManager" ng-class="viewName">
-  <div id="tabs-region" class="tabs-region" ng-if="nbOfViews > 0">
-    <div class="tabs-container">
-      <ul class="list-tabs">
-        <li class="tab item-tab" ng-repeat="(k, v) in views" on-finish-render="ngRepeatFinishedTab" id="popout-tab-{{k}}" ng-click="displayTabContent(k)"
-          ng-class="{'tab-active': v.isSelected}">
-          <span class="tab-item">
-            <i class="tab-icon"></i>
-            <span class="tab-title">
-              {{v.name}}
-            </span>
-          </span>
-        </li>
-      </ul>
-    </div>
+  <div class="actions-container">
+    <div class="btn page-action" ng-click="goToEditMode()" ng-if="!editMode && canUpdate"><i class="fa fa-pencil"></i></div>
+    <div class="btn page-action" ng-click="cancelEditMode()" ng-if="editMode"><i class="fa fa-undo"></i></div>
+    <div class="btn page-action" ng-click="saveChanges()" ng-if="editMode"><i class="fa fa-save"></i></div>
   </div>
-  <div id="view-regions" class="view-region">
-    <div class="view-container">
-      <div class="list-view item-view" ng-repeat="(k, v) in views" on-finish-render="ngRepeatFinishedView" ng-class="{'cw-hidden': !v.isSelected}"
-        ng-bind-html="displayTrusted(v.htmlContent)">
+  <div class="content-container" id="popout-content-container">
+    <div id="tabs-region" class="tabs-region" ng-if="hasTabs">
+      <div class="tabs-container">
+        <ul class="list-tabs">
+          <li class="tab item-tab" ng-repeat="(k, v) in views" on-finish-render="ngRepeatFinishedTab" id="popout-tab-{{k}}" ng-click="displayTabContent(k)"
+            ng-class="{'tab-active': v.isSelected, 'cw-hidden':v.isHidden}">
+            <span class="tab-item">
+              <i class="tab-icon"></i>
+              <span class="tab-title">
+                {{v.name}}
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="view-regions" class="view-region">
+      <div class="view-container">
+        <div class="list-view item-view {{k}}" ng-repeat="(k, v) in views" on-finish-render="ngRepeatFinishedView" ng-class="{'cw-hidden': !v.isSelected}"
+          ng-bind-html="displayTrusted(v.htmlContent)">
+        </div>
       </div>
     </div>
   </div>
