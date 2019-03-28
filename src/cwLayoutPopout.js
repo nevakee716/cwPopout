@@ -48,7 +48,7 @@
                 $scope.editMode = false;
                 $scope.viewName = diagramPopout;
                 $scope.views = _views;
-                $scope.hasTabs = _views.length > 1;
+                $scope.hasTabs = i > 0;
                 $scope.canUpdate = data.accessRights.CanUpdate === true;
                 $scope.TabLoaded = false;
 
