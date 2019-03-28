@@ -1,8 +1,8 @@
 <div class="cw-diagram-popout-container" ng-controller="cwPopoutManager" ng-class="viewName">
   <div class="actions-container">
-    <div class="btn page-action" ng-click="goToEditMode()" ng-if="!editMode && canUpdate"><i class="fa fa-pencil"></i></div>
-    <div class="btn page-action" ng-click="cancelEditMode()" ng-if="editMode"><i class="fa fa-undo"></i></div>
-    <div class="btn page-action" ng-click="saveChanges()" ng-if="editMode"><i class="fa fa-save"></i></div>
+    <div class="btn page-action no-text" ng-click="goToEditMode()" ng-if="!editMode && canUpdate"><i class="fa fa-pencil"></i></div>
+    <div class="btn page-action no-text" ng-click="cancelEditMode()" ng-if="editMode"><i class="fa fa-undo"></i></div>
+    <div class="btn page-action no-text" ng-click="saveChanges()" ng-if="editMode"><i class="fa fa-save"></i></div>
   </div>
   <div class="content-container" id="popout-content-container">
     <div id="tabs-region" class="tabs-region" ng-if="hasTabs">
