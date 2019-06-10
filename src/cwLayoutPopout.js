@@ -50,6 +50,7 @@
                 $scope.views = _views;
                 $scope.hasTabs = i > 0;
                 $scope.canUpdate = data.accessRights.CanUpdate === true;
+                $scope.TabLoaded = false;
 
                 $scope.displayTrusted = function (text) {
                   return $sce.trustAsHtml(text);
@@ -84,8 +85,12 @@
                   };
                 }
 
+                function isTabLoaded(){
+                  return $scope.hasTabs === $scope.TabLoaded;
+                }
+
                 $scope.doCallback = function () {
-                  if ($scope.TabLoaded && $scope.viewLoaded) {
+                  if ($scope.viewLoaded && isTabLoaded()) {
                     cwApi.cwDisplayManager.enableBehaviours(schema, data, false);
                     if (callback === undefined) {
                       cwApi.cwSiteActions.doActionsForSingle(true);
@@ -128,13 +133,7 @@
 
                 $scope.goToEditMode = function () {
                   $scope.updateManager.editManager.setPropertiesEditMode();
-                  /* $scope.updateManager.editManager.associationManager.showDeleteIconsAndSetActions();
-                  $scope.updateManager.editManager.associationManager.setAssociateToExistingActions();
-                  $scope.updateManager.editManager.associationManager.showCreateTargetObjectAndSetActions();
-                  $scope.updateManager.editManager.associationManager.unHideAssociationsBoxes(); */
                   $scope.updateManager.editManager.unHidePropertiesGroups();
-                  $scope.updateManager.editManager.switchHiddenTabsToVisible();
-                  $scope.updateManager.editManager.hideDOMElementsForEditMode();
                   $scope.updateManager.init();
                   $scope.editMode = true;
                 };
