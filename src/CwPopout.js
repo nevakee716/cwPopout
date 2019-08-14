@@ -24,10 +24,12 @@
             }
             var o;
             o = [];
-            o.push('<div class="popout"><div class="panel-expander panel-expander-expand" style="transform: translate3d(0px, -50%, 0px);transition: transform 300ms ease;"></div>');
+            o.push('<div class="popout">');
+            //o.push('<div class="panel-expander panel-expander-expand" style="transform: translate3d(0px, -50%, 0px);transition: transform 300ms ease;"></div>');
             o.push('<div class="popout-top"><ul class="popout-top-container">');
             o.push('<li class="popout-title"><div class="popout-title-div"></div></li>');
             o.push('<li class="popout-title-options">');
+            o.push('<a href="#" class="btn no-text panel-expander-expand"><i class="fa fa-expand"></i></a>');
             o.push('<a href="#" class="btn btn-close-panel no-text"><i class="fa fa-times"></i></a>');
             o.push('<div class="popout-top-buttons" id="popout-top-buttons"></div>');
             o.push('</li>');
@@ -51,19 +53,23 @@
             $(document).off('click', identifier).on('click', identifier, function (e) {
                 e.preventDefault();
                 if ($('.popout').hasClass('popout-expanded')) {
+                    cwApi.customLibs.popout.extended = false;
                     collapsePopout();
                 } else {
                     expandPopout();
+                    cwApi.customLibs.popout.extended = true;
                 }
             });
         }
 
         collapsePopout = function () {
             $('.popout').removeClass('popout-expanded');
+            $('.panel-expander-expand i').toggleClass('fa-times').toggleClass('fa-compress');
         };
 
         expandPopout = function () {
             $('.popout').addClass(' popout-expanded');
+            $('.panel-expander-expand i').toggleClass('fa-times').toggleClass('fa-compress');
         };
 
         registerElementForToggle = function (identifier, title, callback) {
@@ -156,6 +162,7 @@
                 intervalMoving = setInterval(duringAnimation, intervalDuringAnimationTime);
                 $('body').addClass('cw-moving');
             }
+             if(cwApi.customLibs.popout.extended === true) expandPopout();
             setTimeout(popoutShowed, transitionTime);
         };
 
@@ -274,4 +281,8 @@
 
     }());
 
+    if(cwApi.customLibs === undefined ) cwApi.customLibs = {};
+    if(cwApi.customLibs.popout === undefined ) cwApi.customLibs.popout = {};
+    if(cwApi.customLibs.popout.views === undefined ) cwApi.customLibs.popout.views = {};
+    
 }(cwAPI));

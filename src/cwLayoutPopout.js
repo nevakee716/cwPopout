@@ -11,17 +11,20 @@
           if (cwApi.isFunction(cwCustomerSiteActions[diagramPopout])) {
             cwCustomerSiteActions[diagramPopout](cwObject, diagramPopout, data, that);
           } else {
-            var i = 0, o, rootNodeSchema, rootLayout, title, _views = {};
+            var i = 0, o, lastTab = 0,rootNodeSchema, rootLayout, title, _views = {};
             rootNodeSchema = cwApi.ViewSchemaManager.getFirstRootNodeSchemaForView(schema);
             rootLayout = new cwApi.cwLayouts[rootNodeSchema.LayoutName](rootNodeSchema.LayoutOptions);
             title = rootLayout.getDisplayItem(data, true);
 
             cwApi.CwPopout.showPopout(title, undefined, popoutOptions);
+            if(cwApi.customLibs.popout.views[diagramPopout]) lastTab = cwApi.customLibs.popout.views[diagramPopout];
             if (schema.Tab && schema.Tab.Tabs && schema.Tab.Tabs.length) {
               for (i = 0; i < schema.Tab.Tabs.length; i += 1) {
                 let tab = schema.Tab.Tabs[i];
+                let selected = false;
                 o = [];
                 cwApi.cwDisplayManager.outputSortedChildren(o, schema, tab.SortedChildren, data);
+                if(tab.Id === lastTab || lastTab === i) selected = true;
                 _views[tab.Id] = {
                   htmlContent: o.join(''),
                   id: tab.Id,
@@ -34,7 +37,7 @@
                 htmlContent: cwApi.cwDisplayManager.appendContentNoTab(schema, diagramPopout, data).join(''),
                 id: 'tab0',
                 name: 'tab0',
-                isSelected: true
+                isSelected: selected
               };
             }
 
@@ -51,6 +54,7 @@
                 $scope.hasTabs = i > 0;
                 $scope.canUpdate = data.accessRights.CanUpdate === true;
                 $scope.TabLoaded = false;
+                $scope.behavioursLoaded = false;
 
                 $scope.displayTrusted = function (text) {
                   return $sce.trustAsHtml(text);
@@ -61,6 +65,7 @@
                   for (k in $scope.views) {
                     if ($scope.views.hasOwnProperty(k)) {
                       $scope.views[k].isSelected = (id == $scope.views[k].id);
+                      cwApi.customLibs.popout.views[diagramPopout] = id;
                     }
                   }
                 };
@@ -90,8 +95,9 @@
                 }
 
                 $scope.doCallback = function () {
-                  if ($scope.viewLoaded && isTabLoaded()) {
+                  if ($scope.viewLoaded && isTabLoaded() && $scope.behavioursLoaded === false) {
                     cwApi.cwDisplayManager.enableBehaviours(schema, data, false);
+                    $scope.behavioursLoaded = true;
                     if (callback === undefined) {
                       cwApi.cwSiteActions.doActionsForSingle(true);
                     } else {
@@ -133,7 +139,13 @@
 
                 $scope.goToEditMode = function () {
                   $scope.updateManager.editManager.setPropertiesEditMode();
+                  /* $scope.updateManager.editManager.associationManager.showDeleteIconsAndSetActions();
+                  $scope.updateManager.editManager.associationManager.setAssociateToExistingActions();
+                  $scope.updateManager.editManager.associationManager.showCreateTargetObjectAndSetActions();
+                  $scope.updateManager.editManager.associationManager.unHideAssociationsBoxes(); */
                   $scope.updateManager.editManager.unHidePropertiesGroups();
+                  /* $scope.updateManager.editManager.switchHiddenTabsToVisible();
+                  $scope.updateManager.editManager.hideDOMElementsForEditMode(); */
                   $scope.updateManager.init();
                   $scope.editMode = true;
                 };
