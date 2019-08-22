@@ -44,8 +44,8 @@
             } else {
                 for(var key in items.associations) {
                     if(items.associations.hasOwnProperty(key)) {
-                        for(var i=0;i < allItems.associations[key].length; i+=1) {
-                            var a = lookForNode(allItems.associations[key][i],nodeID);
+                        for(var i=0;i < items.associations[key].length; i+=1) {
+                            var a = lookForNode(items.associations[key][i],nodeID);
                             if(a !== null) return a;
                         }
                     }
@@ -62,36 +62,47 @@
             return;
         }
 
+        let nodeIDs = Object.keys(cwApi.getViewsSchemas()[properties.PageName].NodesByID);
+        nodeIDs.splice(nodeIDs.indexOf(properties.NodeID), 1);
+        let items = $.extend(true, {}, allItems);
+        if(items.hasOwnProperty("associations")) items = items.associations;
+        if(cwApi.customLibs.utils.manageHiddenNodes) cwApi.customLibs.utils.manageHiddenNodes(items,nodeIDs)
+
         newLayoutId = cwApi.getNewIdWithLayoutAndExplosion(properties.LayoutOptions.LayoutID, exploded);
         if (properties.PageType === 1 || properties.PageType === 2) {
             // object (single) page
-            rootItem = allItems;
+            rootItem = items;
 
-            if (allItems.nodeID === properties.NodeID) {
+            if (items.nodeID === properties.NodeID) {
                 $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
                 loadVectorDiagram($container, rootItem);
             } else {
-                if (allItems.associations[properties.NodeID] !== undefined && allItems.associations[properties.NodeID].length > 0) {
-                    for (i = 0; i < allItems.associations[properties.NodeID].length; i += 1) {
-                        rootItem = allItems.associations[properties.NodeID][i];
+                if(items.associations === undefined) items.associations = items;
+                if (items.associations[properties.NodeID] !== undefined && items.associations[properties.NodeID].length > 0) {
+                    for (i = 0; i < items.associations[properties.NodeID].length; i += 1) {
+                        rootItem = items.associations[properties.NodeID][i];
                         $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
+                         $container.closest("div.popout .cwLayoutList").css('width', '100%');
                         loadVectorDiagram($container, rootItem);
                     }
                 } else { // allow to load diagram in lower level
-                    allItems.associations[properties.NodeID] = lookForNode(allItems,properties.NodeID);
-                    if (allItems.associations[properties.NodeID] !== undefined && allItems.associations[properties.NodeID].length > 0) {
-                        for (i = 0; i < allItems.associations[properties.NodeID].length; i += 1) {
-                            rootItem = allItems.associations[properties.NodeID][i];
+                    items.associations[properties.NodeID] = lookForNode(items,properties.NodeID);
+                    if (items.associations[properties.NodeID] !== undefined && items.associations[properties.NodeID].length > 0) {
+                        for (i = 0; i < items.associations[properties.NodeID].length; i += 1) {
+                            rootItem = items.associations[properties.NodeID][i];
                             $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
+                             $container.closest("div.popout .cwLayoutList").css('width', '100%');
                             loadVectorDiagram($container, rootItem);
                         }
                     };
                 }
+
             }
         } else {
-            // index page        
-            for (i = 0; i < allItems[properties.NodeID].length; i += 1) {
-                rootItem = allItems[properties.NodeID][i];
+            // index page    
+            if(items.length === undefined && items[properties.NodeID]) items = items[properties.NodeID];
+            for (let i = 0; i < items.length; i += 1) {
+                rootItem = items[i];
                 $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
                 loadVectorDiagram($container, rootItem);
             }
