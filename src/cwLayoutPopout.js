@@ -29,7 +29,7 @@
                   htmlContent: o.join(''),
                   id: tab.Id,
                   name: tab.Name,
-                  isSelected: i === 0 ? true : false
+                  isSelected: selected
                 };
               }
             } else {
@@ -37,7 +37,7 @@
                 htmlContent: cwApi.cwDisplayManager.appendContentNoTab(schema, diagramPopout, data).join(''),
                 id: 'tab0',
                 name: 'tab0',
-                isSelected: selected
+                isSelected: true
               };
             }
 
@@ -159,3 +159,4 @@
   };
 
 }(cwAPI));
+
