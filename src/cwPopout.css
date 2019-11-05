@@ -1,4 +1,29 @@
-
+/* GLOBAL */
+/* LOGIN */
+/* DIAGRAM */
+/* HOME PAGE */
+/* MENU LEFT */
+/* MAIN MENU */
+/* SUB MENU */
+/* PAGE TAB */
+/* DROPDOWN NOTIFICATIONS */
+/* SOCIAL */
+/* LIST BOX */
+/* PROPERTIES GROUP */
+/* BUTTONS */
+/* PAGE ACTIONS */
+/* ACCORDIONS */
+/* DISCUSSIONS */
+/* WORLD MAP */
+/* USER ZONE */
+/* POPUP */
+/* BADGES */
+/* TASKS & NOTIFICATIONS */
+/* GLOBAL SEARCH */
+/* TOP BAR */
+/* GRID */
+/* DIAGRAM TILE */
+/* MATRIX ADVANCED */
 .panel-expander {
   border-bottom: 20px solid transparent;
   border-right: 20px solid rgba(0, 0, 0, 0.25);
@@ -17,7 +42,7 @@
   font-family: FontAwesome;
   content: "\f104";
   padding-left: 5px;
-  color: #424242;
+  color: #5c5d61;
 }
 .popout-expanded .panel-expander:before {
   font-family: FontAwesome;
@@ -25,18 +50,33 @@
 }
 @media screen and (min-width: 1024px) {
   .popout-open .popout.popout-expanded {
-    width: 80%;
+    width: 70%;
   }
+}
+div.cw-diagram-popout-container .actions-container {
+  display: none;
+}
+.cw-diagram-popout-container ul.cw-list,
+.popout-content ul.cw-list {
+  width: 100%;
+}
+.cw-diagram-popout-container div.actions-container .btn,
+.popout-content div.actions-container .btn {
+  float: right;
 }
 .cw-diagram-popout-container div.tabs-container ul.list-tabs,
 .popout-content div.tabs-container ul.list-tabs {
   margin: 0px;
   padding-left: 5px;
+  display: flex;
 }
 .cw-diagram-popout-container div.tabs-container li.item-tab,
 .popout-content div.tabs-container li.item-tab {
   display: inline-block;
   height: 47px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .cw-diagram-popout-container div.tabs-container li.item-tab span.tab-item,
 .popout-content div.tabs-container li.item-tab span.tab-item {
@@ -52,14 +92,14 @@
 }
 .cw-diagram-popout-container div.tabs-container .tab-active > span.tab-item,
 .popout-content div.tabs-container .tab-active > span.tab-item {
-  -moz-box-shadow: inset 0 -2px #0277bd;
-  -webkit-box-shadow: inset 0 -2px #0277bd;
-  box-shadow: inset 0 -2px #0277bd;
+  -moz-box-shadow: inset 0 -2px #03a0ce;
+  -webkit-box-shadow: inset 0 -2px #03a0ce;
+  box-shadow: inset 0 -2px #03a0ce;
   -moz-transition: none;
   -o-transition: none;
   -webkit-transition: none;
   transition: none;
-  color: #0277bd;
+  color: #03a0ce;
 }
 .cw-diagram-popout-container div.tabs-region,
 .popout-content div.tabs-region {
@@ -88,3 +128,4 @@
 .view-region > div .cwPropertiesTableContainer {
   width: 600px;
   margin-right: 2%;
+}
