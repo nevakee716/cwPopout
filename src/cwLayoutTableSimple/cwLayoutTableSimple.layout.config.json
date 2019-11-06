@@ -1,0 +1,13 @@
+{
+  "Name": "grid",
+  "DisplayName": "Table (Simple)",
+  "Description": "Simple grid view, table based",
+  "JavaScriptClassName": "cwLayoutGridForPopout",
+  "Options": [
+    {
+      "Description": "Simple table title",
+      "DisplayName": "Title",
+      "Id": "simpletable-title"
+    }
+  ]
+}
