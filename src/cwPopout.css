@@ -114,6 +114,12 @@ div.cw-diagram-popout-container .actions-container {
 .popout-content div.view-container {
   margin: 0.5em;
 }
+.tableForPopoutWrapper {
+  overflow-x: auto;
+}
+.tableForPopoutWrapper .cw-grid {
+  max-width: 90%;
+}
 .view-region > div {
   display: flex;
   flex-wrap: wrap;
