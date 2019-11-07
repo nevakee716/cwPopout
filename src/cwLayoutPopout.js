@@ -21,7 +21,7 @@
               title,
               _views = {};
             rootNodeSchema = cwApi.ViewSchemaManager.getFirstRootNodeSchemaForView(schema);
-            rootLayout = new cwApi.cwLayouts[rootNodeSchema.LayoutName](rootNodeSchema.LayoutOptions);
+            rootLayout = new cwApi.cwLayouts[rootNodeSchema.LayoutName](rootNodeSchema.LayoutOptions, rootNodeSchema);
             title = rootLayout.getDisplayItem(data, true);
 
             cwApi.CwPopout.showPopout(title, undefined, popoutOptions);
