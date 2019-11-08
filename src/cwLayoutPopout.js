@@ -58,12 +58,11 @@
               templatePath = cwApi.format("{0}/html/{1}/{2}.ng.html", cwApi.getCommonContentPath(), "CwPopout", "cwPopoutContent");
               loader.loadControllerWithTemplate("cwPopoutManager", $container, templatePath, function($scope, $sce, $timeout) {
                 loader.registerEditableScope($scope);
-
                 $scope.editMode = false;
                 $scope.viewName = diagramPopout;
                 $scope.views = _views;
                 $scope.hasTabs = i > 0;
-                $scope.canUpdate = data.accessRights.CanUpdate === true;
+                $scope.canUpdate = data.accessRights.CanUpdate === true && cwApi.getCurrentView();
                 $scope.TabLoaded = false;
                 $scope.behavioursLoaded = false;
 
