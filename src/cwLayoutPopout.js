@@ -21,7 +21,7 @@
               title,
               _views = {};
             rootNodeSchema = cwApi.ViewSchemaManager.getFirstRootNodeSchemaForView(schema);
-            rootLayout = new cwApi.cwLayouts[rootNodeSchema.LayoutName](rootNodeSchema.LayoutOptions, rootNodeSchema);
+            rootLayout = new cwApi.cwLayouts[rootNodeSchema.LayoutName](rootNodeSchema.LayoutOptions, schema);
             title = rootLayout.getDisplayItem(data, true);
 
             cwApi.CwPopout.showPopout(title, undefined, popoutOptions);
@@ -109,7 +109,7 @@
                     cwApi.cwDisplayManager.enableBehaviours(schema, data, false);
                     $scope.behavioursLoaded = true;
                     if (callback === undefined) {
-                      cwApi.cwSiteActions.doActionsForSingle(true);
+                      //cwApi.cwSiteActions.doActionsForSingle(true);
                     } else {
                       return callback && callback();
                     }
