@@ -2,6 +2,39 @@
 @import "../../_mixins";
 @import "../../_variables";
 
+.popout-open .popout .popout-content {
+  height: unset;
+}
+
+.popout.fixe-position {
+  position: fixed;
+  top: 40px;
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: @cwDiagramBreadCrumbBackgroundColor;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: darken(@cwDiagramBreadCrumbBackgroundColor, 10%);
+  }
+
+  .cw-diagram-popout-container {
+    overflow: auto;
+    height: calc(100vh - 80px);
+  }
+}
+
 .panel-expander {
   border-bottom: 20px solid transparent;
   border-right: 20px solid rgba(0, 0, 0, 0.25);
