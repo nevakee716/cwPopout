@@ -1,4 +1,4 @@
-<div class="cw-diagram-popout-container" ng-controller="cwPopoutManager" ng-class="viewName">
+<div class="cw-diagram-popout-container" style="height: calc(100vh - 80px);" ng-controller="cwPopoutManager" ng-class="viewName">
   <div class="actions-container">
     <div class="btn page-action no-text" ng-click="goToEditMode()" ng-if="!editMode && canUpdate"><i class="fa fa-pencil"></i></div>
     <div class="btn page-action no-text" ng-click="cancelEditMode()" ng-if="editMode"><i class="fa fa-undo"></i></div>
@@ -8,8 +8,14 @@
     <div id="tabs-region" class="tabs-region" ng-if="hasTabs">
       <div class="tabs-container">
         <ul class="list-tabs">
-          <li class="tab item-tab" ng-repeat="(k, v) in views" on-finish-render="ngRepeatFinishedTab" id="popout-tab-{{k}}" ng-click="displayTabContent(k)"
-            ng-class="{'tab-active': v.isSelected, 'cw-hidden':v.isHidden}">
+          <li
+            class="tab item-tab"
+            ng-repeat="(k, v) in views"
+            on-finish-render="ngRepeatFinishedTab"
+            id="popout-tab-{{k}}"
+            ng-click="displayTabContent(k)"
+            ng-class="{'tab-active': v.isSelected, 'cw-hidden':v.isHidden}"
+          >
             <span class="tab-item">
               <i class="tab-icon"></i>
               <span class="tab-title">
@@ -22,9 +28,13 @@
     </div>
     <div id="view-regions" class="view-region">
       <div class="view-container">
-        <div class="list-view item-view {{k}}" ng-repeat="(k, v) in views" on-finish-render="ngRepeatFinishedView" ng-class="{'cw-hidden': !v.isSelected}"
-          ng-bind-html="displayTrusted(v.htmlContent)">
-        </div>
+        <div
+          class="list-view item-view {{k}}"
+          ng-repeat="(k, v) in views"
+          on-finish-render="ngRepeatFinishedView"
+          ng-class="{'cw-hidden': !v.isSelected}"
+          ng-bind-html="displayTrusted(v.htmlContent)"
+        ></div>
       </div>
     </div>
   </div>
