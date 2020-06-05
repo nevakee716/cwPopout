@@ -1,14 +1,14 @@
-(function(cwApi) {
+(function (cwApi) {
   "use strict";
 
   cwApi.cwDiagramPopoutHelper = {
-    openDiagramPopout: function(cwObject, diagramPopout, callback, popoutOptions) {
+    openDiagramPopout: function (cwObject, diagramPopout, callback, popoutOptions) {
       var jsonFile,
         schema,
         that = this;
       schema = cwApi.ViewSchemaManager.getPageSchema(diagramPopout);
       jsonFile = cwApi.getObjectViewJsonUrl(diagramPopout, cwObject.object_id);
-      cwApi.getJSONFile(jsonFile, function(data) {
+      cwApi.getJSONFile(jsonFile, function (data) {
         if (cwApi.checkJsonCallback(data)) {
           if (cwApi.isFunction(cwCustomerSiteActions[diagramPopout])) {
             cwCustomerSiteActions[diagramPopout](cwObject, diagramPopout, data, that);
@@ -22,7 +22,7 @@
               _views = {};
             rootNodeSchema = cwApi.ViewSchemaManager.getFirstRootNodeSchemaForView(schema);
             rootLayout = new cwApi.cwLayouts[rootNodeSchema.LayoutName](rootNodeSchema.LayoutOptions, schema);
-            title = rootLayout.getDisplayItem(data, true);
+            title = rootLayout.getDisplayItem(data, false);
 
             cwApi.CwPopout.showPopout(title, undefined, popoutOptions);
             if (cwApi.customLibs.popout.views[diagramPopout]) lastTab = cwApi.customLibs.popout.views[diagramPopout];
@@ -49,14 +49,14 @@
               };
             }
 
-            cwApi.CwAsyncLoader.load("angular", function() {
+            cwApi.CwAsyncLoader.load("angular", function () {
               var loader = cwApi.CwAngularLoader,
                 templatePath,
                 $container = $("#popout-content"),
                 templateLoaded = false;
               loader.setup();
               templatePath = cwApi.format("{0}/html/{1}/{2}.ng.html", cwApi.getCommonContentPath(), "CwPopout", "cwPopoutContent");
-              loader.loadControllerWithTemplate("cwPopoutManager", $container, templatePath, function($scope, $sce, $timeout) {
+              loader.loadControllerWithTemplate("cwPopoutManager", $container, templatePath, function ($scope, $sce, $timeout) {
                 loader.registerEditableScope($scope);
                 $scope.editMode = false;
                 $scope.viewName = diagramPopout;
@@ -66,11 +66,11 @@
                 $scope.TabLoaded = false;
                 $scope.behavioursLoaded = false;
 
-                $scope.displayTrusted = function(text) {
+                $scope.displayTrusted = function (text) {
                   return $sce.trustAsHtml(text);
                 };
 
-                $scope.displayTabContent = function(id) {
+                $scope.displayTabContent = function (id) {
                   var k;
                   for (k in $scope.views) {
                     if ($scope.views.hasOwnProperty(k)) {
@@ -80,11 +80,11 @@
                   }
                 };
 
-                $scope.$on("ngRepeatFinishedTab", function(e) {
+                $scope.$on("ngRepeatFinishedTab", function (e) {
                   $scope.TabLoaded = true;
                   $scope.doCallback();
                 });
-                $scope.$on("ngRepeatFinishedView", function(e) {
+                $scope.$on("ngRepeatFinishedView", function (e) {
                   $scope.viewLoaded = true;
                   $scope.doCallback();
                 });
@@ -104,7 +104,7 @@
                   return $scope.hasTabs === $scope.TabLoaded;
                 }
 
-                $scope.doCallback = function() {
+                $scope.doCallback = function () {
                   if ($scope.viewLoaded && isTabLoaded() && $scope.behavioursLoaded === false) {
                     cwApi.cwDisplayManager.enableBehaviours(schema, data, false);
                     $scope.behavioursLoaded = true;
@@ -121,7 +121,7 @@
                   }
                 };
 
-                $scope.saveChanges = function() {
+                $scope.saveChanges = function () {
                   var k,
                     id = $scope.updateManager.getTabId(),
                     tab = $scope.views[id];
@@ -133,12 +133,12 @@
                     }
                   }
                   $scope.displayTabContent(id);
-                  $scope.updateManager.saveItem(function() {
+                  $scope.updateManager.saveItem(function () {
                     cwApi.cwDiagramPopoutHelper.openDiagramPopout(cwObject, diagramPopout, callback, popoutOptions);
                   });
                 };
 
-                $scope.cancelEditMode = function() {
+                $scope.cancelEditMode = function () {
                   console.log("cancel edit mode");
                   // delete le tab qu'on a eventuellement créé
                   $scope.editMode = false;
@@ -149,7 +149,7 @@
                   $scope.views[$scope.updateManager.getTabId()].isHidden = true;
                 };
 
-                $scope.goToEditMode = function() {
+                $scope.goToEditMode = function () {
                   $scope.updateManager.editManager.setPropertiesEditMode();
                   /* $scope.updateManager.editManager.associationManager.showDeleteIconsAndSetActions();
                   $scope.updateManager.editManager.associationManager.setAssociateToExistingActions();
@@ -167,22 +167,22 @@
         }
       });
     },
-    openDiagramPopoutMultipleObjects: function(cwObjects, diagramPopout, callback, popoutOptions) {
+    openDiagramPopoutMultipleObjects: function (cwObjects, diagramPopout, callback, popoutOptions) {
       var jsonFile,
         schema,
         that = this;
       schema = cwApi.ViewSchemaManager.getPageSchema(diagramPopout);
 
       let callToDo = cwObjects.length - 1;
-      cwObjects.forEach(function(o) {
+      cwObjects.forEach(function (o) {
         jsonFile = cwApi.getObjectViewJsonUrl(diagramPopout, o.id);
-        cwApi.getJSONFile(jsonFile, function(data) {
+        cwApi.getJSONFile(jsonFile, function (data) {
           if (cwApi.checkJsonCallback(data)) checkJsonCallback(o.id, data);
           else callToDo = callToDo - 1;
         });
       });
 
-      var checkJsonCallback = function() {
+      var checkJsonCallback = function () {
         if (callToDo !== 0) {
           callToDo = callToDo - 1;
         } else {
@@ -190,7 +190,7 @@
         }
       };
 
-      var generatePopout = function() {
+      var generatePopout = function () {
         if (cwApi.isFunction(cwCustomerSiteActions[diagramPopout])) {
           cwCustomerSiteActions[diagramPopout](cwObject, diagramPopout, data, that);
         } else {
@@ -232,14 +232,14 @@
             };
           }
 
-          cwApi.CwAsyncLoader.load("angular", function() {
+          cwApi.CwAsyncLoader.load("angular", function () {
             var loader = cwApi.CwAngularLoader,
               templatePath,
               $container = $("#popout-object-content"),
               templateLoaded = false;
             loader.setup();
             templatePath = cwApi.format("{0}/html/{1}/{2}.ng.html", cwApi.getCommonContentPath(), "CwPopout", "cwPopoutContent");
-            loader.loadControllerWithTemplate("cwPopoutManager", $container, templatePath, function($scope, $sce, $timeout) {
+            loader.loadControllerWithTemplate("cwPopoutManager", $container, templatePath, function ($scope, $sce, $timeout) {
               loader.registerEditableScope($scope);
 
               $scope.editMode = false;
@@ -250,11 +250,11 @@
               $scope.TabLoaded = false;
               $scope.behavioursLoaded = false;
 
-              $scope.displayTrusted = function(text) {
+              $scope.displayTrusted = function (text) {
                 return $sce.trustAsHtml(text);
               };
 
-              $scope.displayTabContent = function(id) {
+              $scope.displayTabContent = function (id) {
                 var k;
                 for (k in $scope.views) {
                   if ($scope.views.hasOwnProperty(k)) {
@@ -264,11 +264,11 @@
                 }
               };
 
-              $scope.$on("ngRepeatFinishedTab", function(e) {
+              $scope.$on("ngRepeatFinishedTab", function (e) {
                 $scope.TabLoaded = true;
                 $scope.doCallback();
               });
-              $scope.$on("ngRepeatFinishedView", function(e) {
+              $scope.$on("ngRepeatFinishedView", function (e) {
                 $scope.viewLoaded = true;
                 $scope.doCallback();
               });
@@ -288,7 +288,7 @@
                 return $scope.hasTabs === $scope.TabLoaded;
               }
 
-              $scope.doCallback = function() {
+              $scope.doCallback = function () {
                 if ($scope.viewLoaded && isTabLoaded() && $scope.behavioursLoaded === false) {
                   cwApi.cwDisplayManager.enableBehaviours(schema, data, false);
                   $scope.behavioursLoaded = true;
@@ -305,7 +305,7 @@
                 }
               };
 
-              $scope.saveChanges = function() {
+              $scope.saveChanges = function () {
                 var k,
                   id = $scope.updateManager.getTabId(),
                   tab = $scope.views[id];
@@ -317,12 +317,12 @@
                   }
                 }
                 $scope.displayTabContent(id);
-                $scope.updateManager.saveItem(function() {
+                $scope.updateManager.saveItem(function () {
                   cwApi.cwDiagramPopoutHelper.openDiagramPopout(cwObject, diagramPopout, callback, popoutOptions);
                 });
               };
 
-              $scope.cancelEditMode = function() {
+              $scope.cancelEditMode = function () {
                 console.log("cancel edit mode");
                 // delete le tab qu'on a eventuellement créé
                 $scope.editMode = false;
@@ -333,7 +333,7 @@
                 $scope.views[$scope.updateManager.getTabId()].isHidden = true;
               };
 
-              $scope.goToEditMode = function() {
+              $scope.goToEditMode = function () {
                 $scope.updateManager.editManager.setPropertiesEditMode();
                 /* $scope.updateManager.editManager.associationManager.showDeleteIconsAndSetActions();
                   $scope.updateManager.editManager.associationManager.setAssociateToExistingActions();

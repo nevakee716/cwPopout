@@ -2,10 +2,10 @@
 
 /*global cwAPI,$,document */
 
-(function(cwApi) {
+(function (cwApi) {
   "use strict";
 
-  cwApi.CwPopout = (function() {
+  cwApi.CwPopout = (function () {
     var init,
       registerActions,
       outputError,
@@ -40,7 +40,7 @@
       fixedPosition: true,
     };
 
-    init = function() {
+    init = function () {
       if ($(".content > .popout").length > 0) {
         return false;
       }
@@ -56,25 +56,25 @@
       o.push('<div class="popout-top-buttons" id="popout-top-buttons"></div>');
       o.push("</li>");
       o.push("</ul></div>");
-      o.push('<div id="popout-content" class="popout-content">');
+      o.push('<div id="popout-content" class="popout-content" style="height: calc(100vh - 80px);" >');
       o.push("</div>");
       o.push("</div>");
       $("#content").prepend(o.join(""));
       registerActions();
     };
 
-    registerActions = function() {
+    registerActions = function () {
       registerElementForHide(".popout-top .btn-close-panel");
       registerForToggleExpand(".panel-expander-expand");
-      cwApi.transitionEndsOnce($(".popout"), function() {
+      cwApi.transitionEndsOnce($(".popout"), function () {
         cwApi.diagramManager.redrawDiagramsInDom($(".page-content"));
       });
     };
 
-    registerForToggleExpand = function(identifier) {
+    registerForToggleExpand = function (identifier) {
       $(document)
         .off("click", identifier)
-        .on("click", identifier, function(e) {
+        .on("click", identifier, function (e) {
           e.preventDefault();
           if ($(".popout").hasClass("popout-expanded")) {
             cwApi.customLibs.popout.extended = false;
@@ -86,24 +86,20 @@
         });
     };
 
-    collapsePopout = function() {
+    collapsePopout = function () {
       $(".popout").removeClass("popout-expanded");
-      $(".panel-expander-expand i")
-        .toggleClass("fa-times")
-        .toggleClass("fa-compress");
+      $(".panel-expander-expand i").toggleClass("fa-times").toggleClass("fa-compress");
     };
 
-    expandPopout = function() {
+    expandPopout = function () {
       $(".popout").addClass(" popout-expanded");
-      $(".panel-expander-expand i")
-        .toggleClass("fa-times")
-        .toggleClass("fa-compress");
+      $(".panel-expander-expand i").toggleClass("fa-times").toggleClass("fa-compress");
     };
 
-    registerElementForToggle = function(identifier, title, callback) {
+    registerElementForToggle = function (identifier, title, callback) {
       $(document)
         .off("click", identifier)
-        .on("click", identifier, function(e) {
+        .on("click", identifier, function (e) {
           e.preventDefault();
           toggle(title);
           if (cwApi.isFunction(callback)) {
@@ -112,10 +108,10 @@
         });
     };
 
-    registerElementForShow = function(identifier, title, callback) {
+    registerElementForShow = function (identifier, title, callback) {
       $(document)
         .off("click", identifier)
-        .on("click", identifier, function(e) {
+        .on("click", identifier, function (e) {
           e.preventDefault();
           showPopout(title, callback);
         });
@@ -127,7 +123,7 @@
       popoutOptions.fixedPosition = options.fixedPosition || false;
     }
 
-    showPopout = function(title, callback, options) {
+    showPopout = function (title, callback, options) {
       updateOptions(options);
       show(title);
       if (cwApi.isFunction(callback)) {
@@ -135,14 +131,14 @@
       }
     };
 
-    registerElementForHide = function(identifier, callback) {
+    registerElementForHide = function (identifier, callback) {
       $(document)
         .off("click", identifier)
-        .on("click", identifier, function(e) {
+        .on("click", identifier, function (e) {
           cwApi.CwPendingEventsManager.setEvent("PopoutCloseBtn");
           e.preventDefault();
           hide();
-          setTimeout(function() {
+          setTimeout(function () {
             cwApi.CwPendingEventsManager.deleteEvent("PopoutCloseBtn");
           }, transitionTime);
           if (cwApi.isFunction(callback)) {
@@ -179,7 +175,7 @@
       return undefined;
     }
 
-    show = function(title) {
+    show = function (title) {
       $(".popout").attr("class", "popout");
 
       if (popoutOptions.fixedPosition === true) {
@@ -199,13 +195,13 @@
       setTimeout(popoutShowed, transitionTime);
     };
 
-    outputLoading = function() {
+    outputLoading = function () {
       var output = [];
       output.push(cwApi.getLoadingSpinnerHtml());
       cwApi.CwPopout.setContent(output.join(""));
     };
 
-    scrollContentToTop = function(callback) {
+    scrollContentToTop = function (callback) {
       if (popoutOptions.disableScrollToTop === true) {
         return; // don't scroll to top
       }
@@ -227,7 +223,7 @@
             },
             duration,
             null,
-            function() {
+            function () {
               if (cwApi.isFunction(callback)) {
                 return callback();
               }
@@ -240,7 +236,7 @@
       }
     };
 
-    hide = function() {
+    hide = function () {
       cwApi.CwPendingEventsManager.setEvent("HidePopout");
       $("body").removeClass("popout-open");
       $("body").removeClass("popout-is-open");
@@ -254,7 +250,7 @@
       cwApi.CwPendingEventsManager.timeoutDelete("HidePopout", transitionTime);
     };
 
-    toggle = function(title) {
+    toggle = function (title) {
       if ($("body").hasClass("popout-open")) {
         hide();
       } else {
@@ -262,11 +258,11 @@
       }
     };
 
-    setContent = function(content) {
+    setContent = function (content) {
       $(".popout .popout-content").html(content);
     };
 
-    outputMessage = function(message) {
+    outputMessage = function (message) {
       var output = [];
       output.push('<form class="form-popout">');
       output.push('<h4 class="info-message">');
@@ -276,25 +272,25 @@
       cwApi.CwPopout.setContent(output.join(""));
     };
 
-    setTitle = function(title) {
+    setTitle = function (title) {
       $(".popout-top .popout-title-div").html(title);
     };
 
-    clearContent = function() {
+    clearContent = function () {
       $(".popout .popout-top .popout-title-div").html("");
       $(".popout .popout-content").html("");
       $(".popout .popout-top .popout-top-buttons").html("");
     };
 
-    isOpen = function() {
+    isOpen = function () {
       return $("body").hasClass("popout-is-open");
     };
 
-    onClose = function(callback) {
+    onClose = function (callback) {
       $(".popout").on("close", callback);
     };
 
-    outputError = function(error) {
+    outputError = function (error) {
       setTitle($.i18n.prop("error_error"));
       outputMessage(error);
       if (!isOpen) {
