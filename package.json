@@ -1,7 +1,7 @@
 {
   "name": "cwPopout",
   "description": "Allow you to expand the popout",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "main": "CwPopout.js",
   "scripts": {
     "test": ""
