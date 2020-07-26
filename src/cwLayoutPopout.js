@@ -8,6 +8,8 @@
         that = this;
       schema = cwApi.ViewSchemaManager.getPageSchema(diagramPopout);
       jsonFile = cwApi.getObjectViewJsonUrl(diagramPopout, cwObject.object_id);
+      cwApi.customLibs.popoutOpen = schema;
+
       cwApi.getJSONFile(jsonFile, function (data) {
         if (cwApi.checkJsonCallback(data)) {
           if (cwApi.isFunction(cwCustomerSiteActions[diagramPopout])) {
@@ -140,21 +142,15 @@
 
                 $scope.cancelEditMode = function () {
                   console.log("cancel edit mode");
-                  // delete le tab qu'on a eventuellement créé
-                  $scope.editMode = false;
-                  if ($scope.selectedTab) {
-                    $scope.displayTabContent($scope.selectedTab);
-                  }
-                  $scope.updateManager.editManager.cancelEditMode();
-                  $scope.views[$scope.updateManager.getTabId()].isHidden = true;
+                  cwApi.cwDiagramPopoutHelper.openDiagramPopout(cwObject, diagramPopout, callback, popoutOptions);
                 };
 
                 $scope.goToEditMode = function () {
                   $scope.updateManager.editManager.setPropertiesEditMode();
-                  /* $scope.updateManager.editManager.associationManager.showDeleteIconsAndSetActions();
+                  $scope.updateManager.editManager.associationManager.showDeleteIconsAndSetActions();
                   $scope.updateManager.editManager.associationManager.setAssociateToExistingActions();
                   $scope.updateManager.editManager.associationManager.showCreateTargetObjectAndSetActions();
-                  $scope.updateManager.editManager.associationManager.unHideAssociationsBoxes(); */
+                  $scope.updateManager.editManager.associationManager.unHideAssociationsBoxes();
                   $scope.updateManager.editManager.unHidePropertiesGroups();
                   /* $scope.updateManager.editManager.switchHiddenTabsToVisible();
                   $scope.updateManager.editManager.hideDOMElementsForEditMode(); */
@@ -335,10 +331,10 @@
 
               $scope.goToEditMode = function () {
                 $scope.updateManager.editManager.setPropertiesEditMode();
-                /* $scope.updateManager.editManager.associationManager.showDeleteIconsAndSetActions();
-                  $scope.updateManager.editManager.associationManager.setAssociateToExistingActions();
-                  $scope.updateManager.editManager.associationManager.showCreateTargetObjectAndSetActions();
-                  $scope.updateManager.editManager.associationManager.unHideAssociationsBoxes(); */
+                $scope.updateManager.editManager.associationManager.showDeleteIconsAndSetActions();
+                $scope.updateManager.editManager.associationManager.setAssociateToExistingActions();
+                $scope.updateManager.editManager.associationManager.showCreateTargetObjectAndSetActions();
+                $scope.updateManager.editManager.associationManager.unHideAssociationsBoxes();
                 $scope.updateManager.editManager.unHidePropertiesGroups();
                 /* $scope.updateManager.editManager.switchHiddenTabsToVisible();
                   $scope.updateManager.editManager.hideDOMElementsForEditMode(); */

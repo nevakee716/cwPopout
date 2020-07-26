@@ -287,6 +287,7 @@
     };
 
     onClose = function (callback) {
+      delete cwApi.customLibs.popoutOpen;
       $(".popout").on("close", callback);
     };
 
