@@ -127,7 +127,7 @@
       if (cwApi.isUndefined(view)) {
         return undefined;
       }
-      if (cwApi.customLibs && cwAPI.CwPopout.isOpen && cwApi.customLibs.popoutOpen) return cwApi.customLibs.popoutOpen.NodesByID[nodeId];
+      if (cwApi.customLibs && cwAPI.CwPopout.isOpen() && cwApi.customLibs.popoutOpen) return cwApi.customLibs.popoutOpen.NodesByID[nodeId];
       return getNodeSchemaById(view.cwView, nodeId);
     };
 

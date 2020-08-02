@@ -20,7 +20,12 @@
       if (!cwApi.isNull(this.editPropertyManager.item)) {
         schemaNode = cwApi.ViewSchemaManager.getNodeSchemaByIdForCurrentView(this.editPropertyManager.item.nodeID);
         node = schemaNode.AssociationsTargetObjectTypes[nodeId];
-        if (!cwApi.isUndefined(node) && cwApi.mm.canCreateObject(node.targetScriptName) && node.intersectionObjectScriptName !== null && cwApi.mm.canCreateObject(node.intersectionObjectScriptName.toLowerCase())) {
+        if (
+          !cwApi.isUndefined(node) &&
+          cwApi.mm.canCreateObject(node.targetScriptName) &&
+          node.intersectionObjectScriptName !== null &&
+          cwApi.mm.canCreateObject(node.intersectionObjectScriptName.toLowerCase())
+        ) {
           editAssociation.jQueryPropertyAssoBox.find(".cw-create-target-item").removeClass("cw-hidden");
         }
         this.setCreateTargetObjectActions();
@@ -30,7 +35,7 @@
 
   cwEditPropertyManagerAssociations.prototype.setMandatoryAssociationDOM = function (nodeId, associationBox) {
     var associationType = cwApi.getAssociationType(nodeId);
-    if (associationType.isMandatoryAssociation) {
+    if (associationType && associationType.isMandatoryAssociation) {
       var element = associationBox.find(".cw-property-title-displayname");
       var initialValue = element.text();
       element.text(initialValue + "*");
@@ -236,9 +241,9 @@
     var itemOutput = [];
 
     if (schema.LayoutDrawOneOptions !== null) {
-      drawOneLayout = new cwApi.cwLayouts[schema.LayoutDrawOne](schema.LayoutDrawOneOptions);
+      drawOneLayout = new cwApi.cwLayouts[schema.LayoutDrawOne](schema.LayoutDrawOneOptions, schema);
     } else {
-      drawOneLayout = new cwApi.cwLayouts.cwLayoutList(schema.LayoutOptions);
+      drawOneLayout = new cwApi.cwLayouts.cwLayoutList(schema.LayoutOptions, schema);
     }
 
     var l = cwApi.cwEditProperties.getLayoutWithTemplateOptions(drawOneLayout);
@@ -250,7 +255,11 @@
     ulContainer.find("li").last().addClass("newly-added");
     if (showError) {
       var o = [];
-      o.push('<i class="cw-association-filtered-item fa fa-exclamation" title="', $.i18n.prop("editProperties_gs_associate_filter_warning"), '"></i>');
+      o.push(
+        '<i class="cw-association-filtered-item fa fa-exclamation" title="',
+        $.i18n.prop("editProperties_gs_associate_filter_warning"),
+        '"></i>'
+      );
       ulContainer.find("li").last().find("div").first().append(o.join(""));
     }
     obj.showDeleteIconsAndSetActions();
@@ -341,14 +350,21 @@
     };
 
     var view = cwApi.getCurrentView();
-    var nodeSchema = cwApi.ViewSchemaManager.getNodeSchemaById(view.cwView, nodeId);
+
+    var nodeSchema =
+      cwAPI.CwPopout.isOpen() && cwApi.customLibs.popoutOpen
+        ? cwApi.customLibs.popoutOpen.NodesByID[nodeId]
+        : cwApi.ViewSchemaManager.getNodeSchemaById(view.cwView, nodeId);
 
     newItem.objectTypeScriptName = nodeSchema.ObjectTypeScriptName;
 
     var layoutName = nodeSchema.LayoutDrawOne;
-    var l = new cwApi.cwLayouts.cwLayoutList({
-      NodeID: nodeId,
-    });
+    var l = new cwApi.cwLayouts.cwLayoutList(
+      {
+        NodeID: nodeId,
+      },
+      cwAPI.CwPopout.isOpen() ? cwApi.customLibs.popoutOpen : undefined
+    );
     if (!cwApi.isUndefined(cwApi.cwLayouts[layoutName].drawOne)) {
       l.drawOneMethod = cwApi.cwLayouts[layoutName].drawOne.bind(l);
     }
@@ -359,7 +375,11 @@
       var showError = isWarning(nodeSchema.Filters, getCreateObjectDefaultProperties(name, nodeSchema.Filters, nodeSchema.ObjectTypeScriptName));
       if (showError) {
         var o = [];
-        o.push('<i class="cw-association-filtered-item fa fa-exclamation" title="', $.i18n.prop("editProperties_gs_associate_filter_warning"), '"></i>');
+        o.push(
+          '<i class="cw-association-filtered-item fa fa-exclamation" title="',
+          $.i18n.prop("editProperties_gs_associate_filter_warning"),
+          '"></i>'
+        );
         container.find("li").last().find("div").first().append(o.join(""));
         cwApi.notificationManager.addNotification($.i18n.prop("EditModeAssociateItemFiltered"), "error");
       }
@@ -368,7 +388,26 @@
   }
 
   cwEditPropertyManagerAssociations.prototype.setActionsOnAddToExistingLink = function ($assoBox, assoToLoad) {
-    var that, $a, $select, $ulContainer, alreadyAssociatedItems, itemsById, $searchInput, $resultContainerGS, $loadingGS, $noResultGS, $resultsGS, $searchOffline, $addAssociationGS, $emptySearchNoObjects, currentSearchPage, alreadyAssociatedItemsGS, objName, isEmptySearchOn, isHoveringResults, isElementSelected;
+    var that,
+      $a,
+      $select,
+      $ulContainer,
+      alreadyAssociatedItems,
+      itemsById,
+      $searchInput,
+      $resultContainerGS,
+      $loadingGS,
+      $noResultGS,
+      $resultsGS,
+      $searchOffline,
+      $addAssociationGS,
+      $emptySearchNoObjects,
+      currentSearchPage,
+      alreadyAssociatedItemsGS,
+      objName,
+      isEmptySearchOn,
+      isHoveringResults,
+      isElementSelected;
     that = this;
     $a = $assoBox.find("a.cw-associate-to-existing-item");
     $a.removeClass("cw-hidden");
@@ -454,7 +493,12 @@
       if (!cwAPI.queryObject.isCreatePage() && !isSearchEmpty) {
         var schemaNode = cwApi.ViewSchemaManager.getNodeSchemaByIdForCurrentView(that.editPropertyManager.item.nodeID);
         var node = schemaNode.AssociationsTargetObjectTypes[assoToLoad.nodeId];
-        if (!cwApi.isUndefined(node) && cwApi.mm.canCreateObject(node.targetScriptName) && node.intersectionObjectScriptName !== null && cwApi.mm.canCreateObject(node.intersectionObjectScriptName.toLowerCase())) {
+        if (
+          !cwApi.isUndefined(node) &&
+          cwApi.mm.canCreateObject(node.targetScriptName) &&
+          node.intersectionObjectScriptName !== null &&
+          cwApi.mm.canCreateObject(node.intersectionObjectScriptName.toLowerCase())
+        ) {
           $addAssociationGS.attr("title", $.i18n.prop("editProperties_createAssociationTarget", objName));
           $addAssociationGS.show();
         }
@@ -502,9 +546,25 @@
 
               results.forEach(function (element, index, array) {
                 if (!cwApi.isUndefined(alreadyAssociatedItemsGS[element.ObjectId])) {
-                  o.push('<li class="deactive-result gs-association-result" data-object-id="', element.ObjectId, '" title="', $.i18n.prop("editProperties_gs_associate_disabled"), '">', element.Name, "</li>");
+                  o.push(
+                    '<li class="deactive-result gs-association-result" data-object-id="',
+                    element.ObjectId,
+                    '" title="',
+                    $.i18n.prop("editProperties_gs_associate_disabled"),
+                    '">',
+                    element.Name,
+                    "</li>"
+                  );
                 } else {
-                  o.push('<li class="active-result gs-association-result" data-object-id="', element.ObjectId, '" title="', element.Name, '">', element.Name, "</li>");
+                  o.push(
+                    '<li class="active-result gs-association-result" data-object-id="',
+                    element.ObjectId,
+                    '" title="',
+                    element.Name,
+                    '">',
+                    element.Name,
+                    "</li>"
+                  );
                 }
               });
               $resultsGS.show();
@@ -527,7 +587,10 @@
                   Object.keys(schema.Filters).forEach(function (key) {
                     extraPropertyNames.push(key);
                   });
-                  cwApi.CwRest.Diagram.getExistingObject(schema.ObjectTypeScriptName, objectId, extraPropertyNames, function (isSuccess, completeObj) {
+                  cwApi.CwRest.Diagram.getExistingObject(schema.ObjectTypeScriptName, objectId, extraPropertyNames, function (
+                    isSuccess,
+                    completeObj
+                  ) {
                     if (isSuccess) {
                       var showError = isWarning(schema.Filters, completeObj.properties);
 
@@ -649,7 +712,11 @@
     obj.$ulContainer.find("li").last().addClass("newly-added");
     if (showError) {
       var o = [];
-      o.push('<i class="cw-association-filtered-item fa fa-exclamation" title="', $.i18n.prop("editProperties_gs_associate_filter_warning"), '"></i>');
+      o.push(
+        '<i class="cw-association-filtered-item fa fa-exclamation" title="',
+        $.i18n.prop("editProperties_gs_associate_filter_warning"),
+        '"></i>'
+      );
       obj.$ulContainer.find("li").last().find("div").first().append(o.join(""));
     }
     obj.editAassociationManager.showDeleteIconsAndSetActions();
@@ -723,7 +790,11 @@
         output.push('<form action="#" class="form-create">');
         output.push("<h3>", $.i18n.prop("editProperties_createAssociationTarget", objectName), "</h3>");
         output.push($("#cw-add-association-dialog-" + associationKey).html());
-        output.push('<p><button id="btn_createAssociation" type="button" class="btn-primary">' + $.i18n.prop("editProperties_createAssociationTargetCreate") + "</button></p>");
+        output.push(
+          '<p><button id="btn_createAssociation" type="button" class="btn-primary">' +
+            $.i18n.prop("editProperties_createAssociationTargetCreate") +
+            "</button></p>"
+        );
         output.push("</form>");
         cwApi.CwPopout.setContent(output.join(""));
 
