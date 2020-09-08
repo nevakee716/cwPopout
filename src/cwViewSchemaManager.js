@@ -127,8 +127,10 @@
       if (cwApi.isUndefined(view)) {
         return undefined;
       }
-      if (cwApi.customLibs && cwAPI.CwPopout.isOpen() && cwApi.customLibs.popoutOpen) return cwApi.customLibs.popoutOpen.NodesByID[nodeId];
-      return getNodeSchemaById(view.cwView, nodeId);
+      // if popout open try to look for the node id inside
+      if (cwApi.customLibs && cwAPI.CwPopout.isOpen() && cwApi.customLibs.popoutOpen && cwApi.customLibs.popoutOpen.NodesByID[nodeId])
+        return cwApi.customLibs.popoutOpen.NodesByID[nodeId];
+      else return getNodeSchemaById(view.cwView, nodeId);
     };
 
     return {
