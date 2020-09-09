@@ -419,13 +419,6 @@
       $select.toggleClass("cw-hidden");
       $select.next("div.chosen-container").toggleClass("cw-hidden");
 
-      //filtered layout
-      /* $("create_listbox_on_objectpage-" + this.htmlID)
-        .toggleClass("cw-visible")
-        .toggleClass("cw-hidden");
-      var $b = $("a#cw-edit-mode-add-autocomplete-" + self.nodeID + "-" + self.objectId);
-      $b.removeClass("cw-hidden");*/
-
       if (!$select.hasClass("cw-hidden")) {
         $ulContainer = $("ul.cw-list." + assoToLoad.nodeId);
         alreadyAssociatedItems = {};

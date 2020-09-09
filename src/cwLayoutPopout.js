@@ -111,7 +111,16 @@
                     cwApi.cwDisplayManager.enableBehaviours(schema, data, false);
                     $scope.behavioursLoaded = true;
                     if (callback === undefined) {
-                      //cwApi.cwSiteActions.doActionsForSingle(true);
+                      cwApi.appliedLayouts.forEach(function (layout) {
+                        if (
+                          !cwApi.isUndefined(layout.applyBuiltInJavaScript) &&
+                          layout &&
+                          layout.viewSchema &&
+                          layout.viewSchema.ViewName === diagramPopout
+                        ) {
+                          layout.applyBuiltInJavaScript(undefined);
+                        }
+                      });
                     } else {
                       return callback && callback();
                     }
