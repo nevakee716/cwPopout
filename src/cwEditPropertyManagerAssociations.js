@@ -19,6 +19,7 @@
       // If item is null this is a creation page so remove option to add
       if (!cwApi.isNull(this.editPropertyManager.item)) {
         schemaNode = cwApi.ViewSchemaManager.getNodeSchemaByIdForCurrentView(this.editPropertyManager.item.nodeID);
+
         node = schemaNode.AssociationsTargetObjectTypes[nodeId];
         if (
           !cwApi.isUndefined(node) &&
@@ -239,11 +240,18 @@
   function addOnClickSearchItem(obj, schema, item, ulContainer, showError) {
     var drawOneLayout;
     var itemOutput = [];
-
-    if (schema.LayoutDrawOneOptions !== null) {
-      drawOneLayout = new cwApi.cwLayouts[schema.LayoutDrawOne](schema.LayoutDrawOneOptions, schema);
-    } else {
-      drawOneLayout = new cwApi.cwLayouts.cwLayoutList(schema.LayoutOptions, schema);
+    if (cwApi.queryObject.isCreatePage())
+      if (schema.LayoutDrawOneOptions !== null) {
+        drawOneLayout = new cwApi.cwLayouts[schema.LayoutDrawOne](schema.LayoutDrawOneOptions);
+      } else {
+        drawOneLayout = new cwApi.cwLayouts.cwLayoutList(schema.LayoutOptions);
+      }
+    else {
+      if (schema.LayoutDrawOneOptions !== null) {
+        drawOneLayout = new cwApi.cwLayouts[schema.LayoutDrawOne](schema.LayoutDrawOneOptions, schema);
+      } else {
+        drawOneLayout = new cwApi.cwLayouts.cwLayoutList(schema.LayoutOptions, schema);
+      }
     }
 
     var l = cwApi.cwEditProperties.getLayoutWithTemplateOptions(drawOneLayout);
@@ -697,10 +705,19 @@
   function addOnChangeItem(schema, obj, itemId, showError) {
     var drawOneLayout;
     var itemOutput = [];
-    if (schema.LayoutDrawOneOptions !== null) {
-      drawOneLayout = new cwApi.cwLayouts[schema.LayoutDrawOne](schema.LayoutDrawOneOptions, schema);
-    } else {
-      drawOneLayout = new cwApi.cwLayouts.cwLayoutList(schema.LayoutOptions, schema);
+
+    if (cwApi.queryObject.isCreatePage())
+      if (schema.LayoutDrawOneOptions !== null) {
+        drawOneLayout = new cwApi.cwLayouts[schema.LayoutDrawOne](schema.LayoutDrawOneOptions);
+      } else {
+        drawOneLayout = new cwApi.cwLayouts.cwLayoutList(schema.LayoutOptions);
+      }
+    else {
+      if (schema.LayoutDrawOneOptions !== null) {
+        drawOneLayout = new cwApi.cwLayouts[schema.LayoutDrawOne](schema.LayoutDrawOneOptions, schema);
+      } else {
+        drawOneLayout = new cwApi.cwLayouts.cwLayoutList(schema.LayoutOptions, schema);
+      }
     }
 
     var l = cwApi.cwEditProperties.getLayoutWithTemplateOptions(drawOneLayout);
