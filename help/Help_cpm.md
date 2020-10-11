@@ -17,9 +17,9 @@
 
 
 
-  <link crossorigin="anonymous" media="all" integrity="sha512-/ObziKj9T0mEWZ8AGkhx/9HtmnjaDIK9OW1TYVfHvSYUexaEQhYJr64GE1yLIQgz29SQFpzkvPGQ5Sse1cdJpQ==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-fce6f388a8fd4f4984599f001a4871ff.css" />
-  <link crossorigin="anonymous" media="all" integrity="sha512-Z0DkfbFb4XDoclqPgW0w4WQrnjY2nXN7PcppfsWW1hb5bo+svzJcNTJ/eYyUHHlbgefLjcVE4g0aW4qrmHXjSg==" rel="stylesheet" href="https://github.githubassets.com/assets/site-6740e47db15be170e8725a8f816d30e1.css" />
-    <link crossorigin="anonymous" media="all" integrity="sha512-UDsGRotwx2k6kbfDX9jHfPF0usc3W8ZycpLWUkGPOl75fCsW4/G/yrOzGIXhNMNu7SZmLDXXQflOl6oT3S0GSg==" rel="stylesheet" href="https://github.githubassets.com/assets/github-503b06468b70c7693a91b7c35fd8c77c.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-3D7WIWHAP3fU8nO5QGnFJs64RHcDQmaBGco7phfNhItOCNabRLP+qGl9lKhE0T0nCi7oj/DKL+mizn1njdSn6Q==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-dc3ed62161c03f77d4f273b94069c526.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-0TfsxX6InRFol+EYz4NB5XBB723w2mJIM2X5LR3KL3js6VO2nyZugaJnqRww1ioyTEYlCi/jYHkbLGrNEYLjIw==" rel="stylesheet" href="https://github.githubassets.com/assets/site-d137ecc57e889d116897e118cf8341e5.css" />
+    <link crossorigin="anonymous" media="all" integrity="sha512-HB2PYRerzGfogYz1agRQMUMQbSibNfQjJJbdUZBFapIuT+zRfvj2bZiy2VIBMElXtReoZg+5f3PE/lp1m6fXoA==" rel="stylesheet" href="https://github.githubassets.com/assets/github-1c1d8f6117abcc67e8818cf56a045031.css" />
     
     
     
@@ -70,7 +70,7 @@
   <link rel="assets" href="https://github.githubassets.com/">
   
 
-  <meta name="request-id" content="CB04:BC7E:2919D79:3AAFEFE:5F58A9C5" data-pjax-transient="true"/><meta name="html-safe-nonce" content="7e4d0f15b5bb7e5acc7e2e869b21443f73c1d7e3" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiJDQjA0OkJDN0U6MjkxOUQ3OTozQUFGRUZFOjVGNThBOUM1IiwidmlzaXRvcl9pZCI6IjM4NjI5NTMwMDg0OTQ1ODYzMDkiLCJyZWdpb25fZWRnZSI6ImZyYSIsInJlZ2lvbl9yZW5kZXIiOiJmcmEifQ==" data-pjax-transient="true"/><meta name="visitor-hmac" content="5fcfbdaecc2524d8bd8bb7ed0a055a6d2e9bfbb3208c3a9c78809f74b69996e7" data-pjax-transient="true"/><meta name="cookie-consent-required" content="true" data-pjax-transient="true"/>
+  <meta name="request-id" content="DCE2:133F:295EF3B:3CC29C7:5F7F3E99" data-pjax-transient="true"/><meta name="html-safe-nonce" content="2b96ce4d5f9b833d90a5f64248b709c23e4a077a" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiJEQ0UyOjEzM0Y6Mjk1RUYzQjozQ0MyOUM3OjVGN0YzRTk5IiwidmlzaXRvcl9pZCI6IjM4MjMwNTg1MzQ3NTMzMjA2MDIiLCJyZWdpb25fZWRnZSI6ImZyYSIsInJlZ2lvbl9yZW5kZXIiOiJmcmEifQ==" data-pjax-transient="true"/><meta name="visitor-hmac" content="210d9608ba104cf5ccdd398e977e5ac8ed9dec09c6e76485cd53705dd66387d3" data-pjax-transient="true"/><meta name="cookie-consent-required" content="true" data-pjax-transient="true"/>
 
 
 
@@ -115,10 +115,10 @@
 
     <meta name="enabled-features" content="MARKETPLACE_PENDING_INSTALLATIONS">
 
-  <meta http-equiv="x-pjax-version" content="73fa6ebc261183a7a3a5a7b52aeef51a">
+  <meta http-equiv="x-pjax-version" content="1ef5fe8140d530aca255896a49fc6d6e6c5de35323339528779b569b07815b07">
   
 
-      <link crossorigin="anonymous" media="all" integrity="sha512-Z0DkfbFb4XDoclqPgW0w4WQrnjY2nXN7PcppfsWW1hb5bo+svzJcNTJ/eYyUHHlbgefLjcVE4g0aW4qrmHXjSg==" rel="stylesheet" href="https://github.githubassets.com/assets/site-6740e47db15be170e8725a8f816d30e1.css" />
+      <link crossorigin="anonymous" media="all" integrity="sha512-0TfsxX6InRFol+EYz4NB5XBB723w2mJIM2X5LR3KL3js6VO2nyZugaJnqRww1ioyTEYlCi/jYHkbLGrNEYLjIw==" rel="stylesheet" href="https://github.githubassets.com/assets/site-d137ecc57e889d116897e118cf8341e5.css" />
 
 
 
@@ -147,7 +147,6 @@
     <span style="background-color: #79b8ff;width: 0%;" class="Progress-item progress-pjax-loader-bar "></span>
 </span>      
       
-
 
 
           <header class="Header-old header-logged-out js-details-container Details position-relative f4 py-2" role="banner">
@@ -288,7 +287,7 @@
 
       <div class="d-lg-flex flex-items-center px-3 px-lg-0 text-center text-lg-left">
           <div class="d-lg-flex mb-3 mb-lg-0">
-              <div class="header-search header-search-current js-header-search-current flex-auto  flex-self-stretch flex-md-self-auto mr-0 mr-md-3 mb-3 mb-md-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to js-header-search-current-jump-to"
+              <div class="header-search header-search-current js-header-search-current flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to js-header-search-current-jump-to"
   role="combobox"
   aria-owns="jump-to-results"
   aria-label="Search or jump to"
@@ -296,8 +295,8 @@
   aria-expanded="false"
 >
   <div class="position-relative">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="User" data-scope-id="1424619" data-scoped-search-url="/search?user=nevakee716" data-unscoped-search-url="/search" action="/search?user=nevakee716" accept-charset="UTF-8" method="get">
-      <label class="form-control input-sm header-search-wrapper p-0 header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="User" data-scope-id="1424619" data-scoped-search-url="/users/nevakee716/search" data-unscoped-search-url="/search" action="/users/nevakee716/search" accept-charset="UTF-8" method="get">
+      <label class="form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
         <input type="text"
           class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
           data-hotkey="s,/"
@@ -314,7 +313,7 @@
           spellcheck="false"
           autocomplete="off"
           >
-          <input type="hidden" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" value="Q9N36Cdmx9Fys6od451RERyjR+8ZSWTH2tAH60DvhUl7oKIDLnxThnvw8kj/JU1Ap98VculEhmc9+IhSHJ3/OQ==" />
+          <input type="hidden" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" value="e5jfHWDL4FJVHJ3eh5VTXknE3PcFwZDL9Tng3go7sz4uzfNw5e0xnHMe1cI8yJPbyuBmQQPifLgAqCljt/8oLQ==" />
           <input type="hidden" class="js-site-search-type-field" name="type" >
             <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
@@ -460,7 +459,8 @@
 
 
 
-    <div id="js-flash-container">
+
+    <div data-pjax-replace id="js-flash-container">
 
 
   <template class="js-flash-template">
@@ -636,10 +636,13 @@
           </a>
         </li>
       </ul>
-      <ul class="list-style-none d-flex text-gray">
+      <ul class="list-style-none d-flex flex-wrap text-gray">
         <li class="mr-3">&copy; 2020 GitHub, Inc.</li>
         <li class="mr-3"><a href="/site/terms" data-ga-click="Footer, go to terms, text:terms" class="link-gray">Terms</a></li>
         <li class="mr-3"><a href="/site/privacy" data-ga-click="Footer, go to privacy, text:privacy" class="link-gray">Privacy</a></li>
+          <li class="js-cookie-consent-preferences-link-container mr-3" hidden="hidden">
+  <button data-ga-click="Footer, go to cookie preferences, text:cookie preferences" class="btn-link js-cookie-consent-preferences-link link-gray" type="button">Cookie Preferences</button>
+</li>
         <li class="mr-3"><a href="/site-map" data-ga-click="Footer, go to site map, text:site map" class="link-gray">Site Map</a></li>
         <li><a href="/git-guides" data-ga-click="Footer, go to Git Guides, text:What is Git?" class="link-gray">What is Git?</a></li>
       </ul>
@@ -659,25 +662,24 @@
   </div>
 
 
-    <script crossorigin="anonymous" async="async" integrity="sha512-bn/3rKJzBl2H64K38R8KaVcT26vKK7BJQC59lwYc+9fjlHzmy0fwh+hzBtsgTdhIi13dxjzNKWhdSN8WTM9qUw==" type="application/javascript" id="js-conditional-compat" data-src="https://github.githubassets.com/assets/compat-bootstrap-6e7ff7ac.js"></script>
-    <script crossorigin="anonymous" integrity="sha512-CxjaMepCmi+z0LTeztU2S8qGD25LyHD6j9t0RSPevy63trFWJVwUM6ipAVLgtpMBBgZ53wq8JPkSeQ6ruaZL2w==" type="application/javascript" src="https://github.githubassets.com/assets/environment-bootstrap-0b18da31.js"></script>
-    <script crossorigin="anonymous" async="async" integrity="sha512-1asxmVI6ClJEkIzBZkT/O/Dt4uC1ij2kXNr6+KHMSzklSAgET6nXJYK0sNU14B4xK42w16ipVHik2ptCgcp4ug==" type="application/javascript" src="https://github.githubassets.com/assets/vendor-d5ab3199.js"></script>
-    <script crossorigin="anonymous" async="async" integrity="sha512-fSJhlnzAmN8YGQzsLw+aIWStqZs+CCbAvTUqX2Vs0T94bzWx+xesvQ4znK/+NVew5GeaHHu51R863aHLhT6xpw==" type="application/javascript" src="https://github.githubassets.com/assets/frameworks-7d226196.js"></script>
+    <script crossorigin="anonymous" async="async" integrity="sha512-O8GTqkyR57l/sxhU8bdDyhNYweSdc6TzDwJ7JvY4SJpZye2+L5ayXb5dDiHo45PLT+boMpfMts4kmDzwuv6ZBQ==" type="application/javascript" id="js-conditional-compat" data-src="https://github.githubassets.com/assets/compat-3bc193aa.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-qBeyRIjDR3DFKTE2D3j4NncHH72scmqyompBxHHrg7D5+rWW8q2xTxXbF7Z2g8Jx7UNpXfM+3R/FVU0SLgFrgw==" type="application/javascript" src="https://github.githubassets.com/assets/environment-a817b244.js"></script>
+    <script crossorigin="anonymous" async="async" integrity="sha512-bQN7lkdk+ipFPj01p+l+PVcCMMzdIVa8vAeJKv75R1eQv6+vO1x+XynzAHv0ONQW1vERNnfnnMl0ophD3LHJlA==" type="application/javascript" src="https://github.githubassets.com/assets/vendor-6d037b96.js"></script>
+    <script crossorigin="anonymous" async="async" integrity="sha512-wKa7myhlUJA97gy3QUo/UmvYtSw0bPY0TuEa142dUdr5fUVRzFekRsIlOYe9aG27Jwn0+62YreFFc8pJl5NeVw==" type="application/javascript" src="https://github.githubassets.com/assets/frameworks-c0a6bb9b.js"></script>
     
-    <script crossorigin="anonymous" async="async" integrity="sha512-HByQP/bvxA1cVqMo/ijyV7ScMcM0W70e9FCs4vIymsPcyVPPYwV7888c8H7d3pYFFwRYsrmpF+CIfh634abbRQ==" type="application/javascript" src="https://github.githubassets.com/assets/behaviors-bootstrap-1c1c903f.js"></script>
+    <script crossorigin="anonymous" async="async" integrity="sha512-M58lBGvT9bKA9qfI2bENVmqQ0H7VXQQNTL5SZHSBn9hrZrpEdRJEYW/G3IB+gFuZe0FyGi5E+5somJJkhGRWSg==" type="application/javascript" src="https://github.githubassets.com/assets/behaviors-339f2504.js"></script>
     
-      <script crossorigin="anonymous" async="async" integrity="sha512-NqTqgekwk460TqY5fnqcpQSWPHLK1qsbqM7LJI5BqHR6pm1rYOIUnuqP6w3s6EpoiNdh/YRo7amc5UDIRPF27A==" type="application/javascript" data-module-id="./contributions-spider-graph.js" data-src="https://github.githubassets.com/assets/contributions-spider-graph-36a4ea81.js"></script>
-      <script crossorigin="anonymous" async="async" integrity="sha512-+gsQJsxfykVBWz55DeGg98DWr56R+0qqy99k3te2aiGVSCq2xXITa35MEEo98VBcENTIWgNB5TyjAzpC+I39IQ==" type="application/javascript" data-module-id="./drag-drop.js" data-src="https://github.githubassets.com/assets/drag-drop-fa0b1026.js"></script>
-      <script crossorigin="anonymous" async="async" integrity="sha512-iLuC2weaJqL9mYAud2WDWjhd8cJe8dXVxw2KhCH2Rnj6WJvTzlZRmvTtL09wNWX6nRze/TDaQ7gq7BFLchaDYg==" type="application/javascript" data-module-id="./image-crop-element-loader.js" data-src="https://github.githubassets.com/assets/image-crop-element-loader-88bb82db.js"></script>
-      <script crossorigin="anonymous" async="async" integrity="sha512-nUR4Y2fubaFa0wtifOrPwK9sE66qWTwMhRyV/RNiIGZXj8TncgWM8N0ZZ8ZcuPOPf72NcDj38Fe9Vyjmo8ej5Q==" type="application/javascript" data-module-id="./jump-to.js" data-src="https://github.githubassets.com/assets/jump-to-9d447863.js"></script>
-      <script crossorigin="anonymous" async="async" integrity="sha512-HzWUeLy0p20M4Lc3+EerTwy/VaH3vMuKLvhFJr0PsJfKXnsD9oy5SfashhxStUirglhYZUB4fLYQRM1uzrFyNg==" type="application/javascript" data-module-id="./profile-pins-element.js" data-src="https://github.githubassets.com/assets/profile-pins-element-1f359478.js"></script>
-      <script crossorigin="anonymous" async="async" integrity="sha512-qECv/jhsvLFN77eGNu0cjMR2+zvAlLyhQVTnmayJc5OLZoxMLjQZxZW1hK/dhcYro6Wec/aiF21HYf2N5OilYQ==" type="application/javascript" data-module-id="./randomColor.js" data-src="https://github.githubassets.com/assets/randomColor-a840affe.js"></script>
-      <script crossorigin="anonymous" async="async" integrity="sha512-vK7rRnsAi4qcmC2HqCfPyEBZgIMWb6Azyb1PJxgL1FtEFMydK//dsnuLdVx+RaPGg71Z58ossFXqkLWgMevvdw==" type="application/javascript" data-module-id="./sortable-behavior.js" data-src="https://github.githubassets.com/assets/sortable-behavior-bcaeeb46.js"></script>
-      <script crossorigin="anonymous" async="async" integrity="sha512-mHqsE5aQq7fAmmLd0epHBJK8rn8DOVnjW2YQOT8wvsN1oLrypw0cDFmwXPDwbMghHyo4kKiOtVJ/kEsEzwwibw==" type="application/javascript" data-module-id="./tweetsodium.js" data-src="https://github.githubassets.com/assets/tweetsodium-987aac13.js"></script>
-      <script crossorigin="anonymous" async="async" integrity="sha512-p5sqGfXKwN+U01lKUGTMAuO21h9TM91VgWfR8Btr42mKTWGUd0QxUNFd4awq0zdj4Jm5IjPW1sNn/Sqweuv9Gw==" type="application/javascript" data-module-id="./user-status-submit.js" data-src="https://github.githubassets.com/assets/user-status-submit-a79b2a19.js"></script>
+      <script crossorigin="anonymous" async="async" integrity="sha512-Fa5pI4GzvUUIlRlCXYXGH3k9FIAi6uWKe+/QEXeLtNzE9COiS3l5SMQt9YLVrXQhe9pQykLWMuOpkMUkqsfc2w==" type="application/javascript" data-module-id="./contributions-spider-graph.js" data-src="https://github.githubassets.com/assets/contributions-spider-graph-15ae6923.js"></script>
+      <script crossorigin="anonymous" async="async" integrity="sha512-gRWMBXifsI3QQuW9ZhfvZcOu0aA+/XmBnoE8dNHxszlOu5DTE9vQJToKI7Y4CF/51ZdqSSpx+4auFPl4ixhGKQ==" type="application/javascript" data-module-id="./drag-drop.js" data-src="https://github.githubassets.com/assets/drag-drop-81158c05.js"></script>
+      <script crossorigin="anonymous" async="async" integrity="sha512-aS9dRiKuyInmHMdwiM6O8170rd5Nlk8rL3BbUZkshtt43FLC0RTRNVki0zgaXAnl/RBqg5Dd/i2gSxcVHGorbw==" type="application/javascript" data-module-id="./jump-to.js" data-src="https://github.githubassets.com/assets/jump-to-692f5d46.js"></script>
+      <script crossorigin="anonymous" async="async" integrity="sha512-WOR+F21pMDHA970j37hzMyp1qluNZ0TQIdtNY7bHcwWPUU3IXxBqMSsAm3+h/A5KcfKeyHTXH/w6+i4sq/YofQ==" type="application/javascript" data-module-id="./profile-pins-element.js" data-src="https://github.githubassets.com/assets/profile-pins-element-58e47e17.js"></script>
+      <script crossorigin="anonymous" async="async" integrity="sha512-mGhHrE0HJ7vEibXJt/Agfu9Gd7z9PpvEiRthudiS5f0WZMyO6PvVmdN9pVZsQEybIa4wKuiSeHBh5LGE/AqKwg==" type="application/javascript" data-module-id="./randomColor.js" data-src="https://github.githubassets.com/assets/randomColor-986847ac.js"></script>
+      <script crossorigin="anonymous" async="async" integrity="sha512-PulklwTNjJArlDqvCysC0AKYETVeAa1gJlPSSwR/CinO1u09p8B8vtwVwiTdeutKpU7PP0cWWxuFDOZcdor/Ww==" type="application/javascript" data-module-id="./sortable-behavior.js" data-src="https://github.githubassets.com/assets/sortable-behavior-3ee96497.js"></script>
+      <script crossorigin="anonymous" async="async" integrity="sha512-oGXvq8sa+RZSzTBYJO5ANAq6wuhwiZbLXMDisi8OjgoarOvLv+jjOG4u0WHYSpr55DUVER6Vkl8w9EcnfMvuOQ==" type="application/javascript" data-module-id="./tweetsodium.js" data-src="https://github.githubassets.com/assets/tweetsodium-a065efab.js"></script>
+      <script crossorigin="anonymous" async="async" integrity="sha512-WxzjxL8Ygim8demYcSckvmOJ8pmQO2xqNYWVYgpQL2hc4bFm5BsiZbh6rozANN2/mInrOqelXdtxm0cSb04GOg==" type="application/javascript" data-module-id="./user-status-submit.js" data-src="https://github.githubassets.com/assets/user-status-submit-5b1ce3c4.js"></script>
     
-    <script crossorigin="anonymous" async="async" integrity="sha512-/5tCIyQXtj56WjfrSw5bCmIGqh3KTDtvGkGZy5+YId1tMtiN5J6+LC91XxtaFnd82HIt7I3FwnLLO31EBpLbvA==" type="application/javascript" src="https://github.githubassets.com/assets/diffs-bootstrap-ff9b4223.js"></script>
-<script crossorigin="anonymous" async="async" integrity="sha512-4ymX7JFRVg3gJNVHSOjEYnTvN4psYo8TwfDssWgRzrAYo0UBm1CrlALXbZNN7MO4IDX3H+pSx4K+5+V71I9Ffg==" type="application/javascript" src="https://github.githubassets.com/assets/github-bootstrap-e32997ec.js"></script>
+    <script crossorigin="anonymous" async="async" integrity="sha512-Kn7A71E6OHc4ChHC8r3084lYwtSuEv3vkO3Bdyj5kY5JxdH5fucdoviTJtoY/MaNbDFwIj5pjgY9WFSEf1dzmQ==" type="application/javascript" src="https://github.githubassets.com/assets/diffs-2a7ec0ef.js"></script>
+<script crossorigin="anonymous" async="async" integrity="sha512-N2bOmfUctN98feYNfoins8maDxay/PH8UtF5Kpe5Tdmus66fP47SFQtRLFtUVpO0U0I6Q2/1KMXu+ZH3BP2K+Q==" type="application/javascript" src="https://github.githubassets.com/assets/github-3766ce99.js"></script>
   <div class="js-stale-session-flash flash flash-warn flash-banner" hidden
     >
     <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg>
@@ -699,6 +701,75 @@
   <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
   <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
   </div>
+</div>
+
+    <div class="js-cookie-consent-banner" hidden>
+  <div class="hx_cookie-banner p-2 p-sm-3 p-md-4">
+    <div style="max-width: 1194px;" class="Box hx_cookie-banner-box box-shadow-medium mx-auto">
+    <div class="Box-body border-0 py-0 px-3 px-md-4">
+      <div class="js-main-cookie-banner hx_cookie-banner-main">
+          <div class="d-md-flex flex-items-center py-3">
+            <p class="f5 flex-1 mb-3 mb-md-0">
+              
+  We use cookies and similar technologies ("cookies") to provide and secure our websites, as well as to analyze the usage of our websites, in order to offer you a great user experience. To learn more about our use of cookies see our <a href="https://docs.github.com/en/github/site-policy/github-privacy-statement#our-use-of-cookies-and-tracking">Privacy Statement</a>.
+
+              <br><br>
+              Select <span class="text-bold">Accept all</span> to consent to this use, <span class="text-bold">Reject all</span> to decline this use, or <span class="text-bold">More info</span> to control your cookie preferences. You can always update your selection by clicking <span class="text-bold">Cookie Preferences</span> at the bottom of the page. 
+            </p>
+            <div class="d-flex d-md-block flex-wrap flex-sm-nowrap">
+              <button class="btn btn-outline flex-sm-1 width-full width-sm-auto mb-2 mb-sm-0 mr-sm-1 m-md-0 ml-md-3 js-cookie-consent-more-info">More info</button>
+              <button class="btn btn-outline flex-1 mr-1 mx-sm-1 m-md-0 ml-md-2 js-cookie-consent-accept-all">Accept all</button>
+              <button class="btn btn-outline flex-1 ml-1 m-md-0 ml-md-2 js-cookie-consent-reject-all">Reject all</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="js-cookie-details hx_cookie-banner-details" hidden>
+          <div class="d-md-flex flex-items-center py-3">
+            <p class="f5 flex-1 mb-2 mb-md-0">
+              
+  We use cookies and similar technologies ("cookies") to provide and secure our websites, as well as to analyze the usage of our websites, in order to offer you a great user experience. To learn more about our use of cookies see our <a href="https://docs.github.com/en/github/site-policy/github-privacy-statement#our-use-of-cookies-and-tracking">Privacy Statement</a>.
+
+            </p>
+            <div class="d-flex d-md-block flex-wrap flex-sm-nowrap">
+              <button class="btn btn-outline flex-sm-1 width-full width-sm-auto mb-2 mb-sm-0 mr-sm-1 m-md-0 ml-md-3 js-cookie-consent-less-info">Less info</button>
+              <button class="btn btn-outline flex-1 mr-1 mx-sm-1 m-md-0 ml-md-2 js-cookie-consent-accept-all" aria-disabled="true">Accept all</button>
+              <button class="btn btn-outline flex-1 ml-1 m-md-0 ml-md-2 js-cookie-consent-reject-all" aria-disabled="true">Reject all</button>
+            </div>
+          </div>
+
+          <div class="d-md-flex flex-items-center py-3 border-top">
+            <div class="f5 flex-1 mb-2 mb-md-0">
+              <h5 class="mb-1">Essential cookies</h5>
+              <p class="f6 mb-md-0">We use essential cookies to perform essential website functions, e.g. they're used to log you in. 
+                <a href="https://docs.github.com/en/github/site-policy/github-subprocessors-and-cookies">Learn more</a>
+              </p>
+            </div>
+            <div class="text-right">
+              <h5 class="text-blue">Always active</h5>
+            </div>
+          </div>
+
+          <div class="d-md-flex flex-items-center py-3 border-top">
+            <div class="f5 flex-1 mb-2 mb-md-0">
+              <h5 class="mb-1">Analytics cookies</h5>
+              <p class="f6 mb-md-0">We use analytics cookies to understand how you use our websites so we can make them better, e.g. they're used to gather information about the pages you visit and how many clicks you need to accomplish a task. 
+                <a href="https://docs.github.com/en/github/site-policy/github-subprocessors-and-cookies">Learn more</a>
+              </p>
+            </div>
+            <div class="text-right">
+              <div class="BtnGroup mt-1 mt-md-0 ml-2">
+                <button class="btn btn-outline BtnGroup-item js-accept-analytics-cookies" type="button">Accept</button>
+                <button class="btn btn-outline BtnGroup-item js-reject-analytics-cookies" type="button">Reject</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-right py-3 border-top">
+            <button class="btn btn-primary js-save-cookie-preferences" type="button" disabled>Save preferences</button>
+          </div>
+        </div>
+</div></div>  </div>
 </div>
 
 
