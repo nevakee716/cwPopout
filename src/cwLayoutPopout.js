@@ -69,7 +69,8 @@
                     $scope.hasTabs = i > 0;
                     $scope.TabLoaded = false;
                     $scope.behavioursLoaded = false;
-                    $scope.canUpdate = userCanEditObject;
+                    $scope.canUpdate =
+                      !cwApi.cwUser.isCurrentUserSocial() && userCanEditObject && data.accessRights.CanUpdate === true && cwApi.getCurrentView();
 
                     $scope.displayTrusted = function (text) {
                       return $sce.trustAsHtml(text);
