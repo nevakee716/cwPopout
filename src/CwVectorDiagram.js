@@ -67,7 +67,7 @@
 
     if (items.objectTypeScriptName === "diagram") {
       $container = cwVectorDiagram.getDiagramContainerZone(items.object_id, newLayoutId);
-      loadVectorDiagram($container, items);
+      cwAPI.customLibs.diagramViewerByNodeIDAndID[items.nodeID + "_" + items.object_id] = loadVectorDiagram($container, items);
       return;
     }
     if (items.hasOwnProperty("associations")) items = items.associations;
@@ -79,7 +79,7 @@
 
       if (items.nodeID === properties.NodeID) {
         $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
-        loadVectorDiagram($container, rootItem);
+        cwAPI.customLibs.diagramViewerByNodeIDAndID[items.nodeID + "_" + rootItem.object_id] = loadVectorDiagram($container, rootItem);
       } else {
         if (items.associations === undefined) items.associations = items;
         if (items.associations[properties.NodeID] != undefined && items.associations[properties.NodeID].length > 0) {
@@ -87,7 +87,7 @@
             rootItem = items.associations[properties.NodeID][i];
             $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
             $container.closest("div.popout .cwLayoutList").css("width", "100%");
-            loadVectorDiagram($container, rootItem);
+            cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.NodeID + "_" + rootItem.object_id] = loadVectorDiagram($container, rootItem);
           }
         } else {
           // allow to load diagram in lower level
@@ -97,7 +97,7 @@
               rootItem = items.associations[properties.NodeID][i];
               $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
               $container.closest("div.popout .cwLayoutList").css("width", "100%");
-              loadVectorDiagram($container, rootItem);
+              cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.NodeID + "_" + rootItem.object_id] = loadVectorDiagram($container, rootItem);
             }
           }
         }
@@ -112,6 +112,95 @@
       }
     }
   };
+
+  function updateRootItem(automaticDiagramProperties, layoutOptions) {
+    var split;
+    if (layoutOptions.DisplayPropertyScriptName) {
+      split = layoutOptions.DisplayPropertyScriptName.split("/");
+      automaticDiagramProperties.rootItem = {
+        object_id: split[1],
+      };
+      automaticDiagramProperties.automaticName = split[0];
+      automaticDiagramProperties.heatMapNodeId = split[2];
+    }
+  }
+
+  function colorizeHeatMap(dv, allItems, automaticDiagramProperties) {
+    if (automaticDiagramProperties.heatMapNodeId) {
+      var impactedItems,
+        impactedIds,
+        nodeSchema = cwApi.ViewSchemaManager.getNodeSchemaByIdForCurrentView(automaticDiagramProperties.heatMapNodeId);
+      impactedItems = allItems.associations[automaticDiagramProperties.heatMapNodeId];
+      impactedIds = {};
+      impactedItems.forEach(function (i) {
+        impactedIds[i.object_id] = true;
+      });
+      dv.diagramShapes.forEach(function (ds) {
+        if (
+          nodeSchema.ObjectTypeScriptName.toLowerCase() === ds.shape.cwObject.objectTypeScriptName &&
+          impactedIds[ds.shape.objectId] !== undefined
+        ) {
+          ds.shape.isSelectedForEditor = true;
+          ds.shape.isSelectedForEditorProperties = {
+            backgroundColor: "#009688",
+          };
+        }
+      });
+    }
+  }
+
+  cwBehaviours.CwAutomaticDiagram.setup = function (properties, allItems, isSearching, exploded, callback) {
+    /*jslint unparam:true*/
+    var automaticDiagramProperties = {},
+      fullScreen,
+      i,
+      $container,
+      newLayoutId;
+    automaticDiagramProperties.automaticName = properties.Behaviour.Options["automatic-diagram-name"];
+    automaticDiagramProperties.rootItem = null;
+    fullScreen = false;
+
+    if (cwApi.isNull(allItems)) {
+      $container = $("div." + properties.NodeID);
+      cwApi.cwDisplayManager.setNoDataAvailableHtml($container);
+      return;
+    }
+
+    function loadAutomaticDiagram($container, automaticDiagramProperties, callback) {
+      var diagram;
+      diagram = new cwApi.Diagrams.CwDiagramViewer($container, fullScreen, properties);
+      diagram.loadAutomaticDiagram(automaticDiagramProperties.automaticName, automaticDiagramProperties.rootItem.object_id, callback);
+      return diagram;
+    }
+
+    newLayoutId = cwApi.getNewIdWithLayoutAndExplosion(properties.LayoutOptions.LayoutID, exploded);
+    if (properties.PageType === 1) {
+      // single page
+      automaticDiagramProperties.rootItem = allItems;
+      $container = $("#cw-diagram-zone-" + automaticDiagramProperties.rootItem.object_id + "-" + newLayoutId);
+
+      updateRootItem(automaticDiagramProperties, properties.LayoutOptions);
+
+      cwAPI.customLibs.diagramViewerByNodeIDAndID[
+        properties.LayoutOptions.LayoutID + "_" + automaticDiagramProperties.rootItem.object_id
+      ] = loadAutomaticDiagram($container, automaticDiagramProperties, function (err, dv) {
+        colorizeHeatMap(dv, allItems, automaticDiagramProperties);
+      });
+    } else {
+      // index page
+      for (i = 0; i < allItems[properties.NodeID].length; i += 1) {
+        automaticDiagramProperties.rootItem = allItems[properties.NodeID][i];
+        $container = $("#cw-diagram-zone-" + automaticDiagramProperties.rootItem.object_id + "-" + newLayoutId);
+        loadAutomaticDiagram($container, automaticDiagramProperties);
+      }
+    }
+  };
+  if (cwAPI.customLibs === undefined) {
+    cwAPI.customLibs = {};
+  }
+  if (cwAPI.customLibs.diagramViewerByNodeIDAndID === undefined) {
+    cwAPI.customLibs.diagramViewerByNodeIDAndID = {};
+  }
 
   cwBehaviours.CwVectorDiagram = cwVectorDiagram;
 })(cwAPI, jQuery);
