@@ -51,6 +51,7 @@
       o.push('<div class="popout-top"><ul class="popout-top-container">');
       o.push('<li class="popout-title"><div class="popout-title-div"></div></li>');
       o.push('<li class="popout-title-options">');
+      o.push('<a class="btn no-text panel-previous"><i class="fa fa-arrow-left"></i></a>');
       o.push('<a href="#" class="btn no-text panel-expander-expand"><i class="fa fa-expand"></i></a>');
       o.push('<a href="#" class="btn btn-close-panel no-text"><i class="fa fa-times"></i></a>');
       o.push('<div class="popout-top-buttons" id="popout-top-buttons"></div>');
@@ -66,6 +67,19 @@
     registerActions = function () {
       registerElementForHide(".popout-top .btn-close-panel");
       registerForToggleExpand(".panel-expander-expand");
+
+      $(".popout .panel-previous").on("click", function (e) {
+        let obj = { object_id: cwApi.customLibs.popoutHistory[1].id };
+        let popOutName = cwApi.customLibs.popoutHistory[1].popOutName;
+        cwApi.customLibs.popoutHistory.shift();
+        cwApi.cwDiagramPopoutHelper.openDiagramPopout(obj, popOutName);
+        if (cwApi.customLibs.popoutHistory && cwApi.customLibs.popoutHistory.length > 1) {
+          $(".popout .panel-previous").removeClass("cw-hidden");
+        } else {
+          $(".popout .panel-previous").addClass("cw-hidden");
+        }
+      });
+
       cwApi.transitionEndsOnce($(".popout"), function () {
         cwApi.diagramManager.redrawDiagramsInDom($(".page-content"));
       });

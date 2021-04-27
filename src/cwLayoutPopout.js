@@ -7,6 +7,24 @@
         schema,
         that = this;
       schema = cwApi.ViewSchemaManager.getPageSchema(diagramPopout);
+
+      if (cwApi.customLibs.popoutHistory === undefined || !cwApi.CwPopout.isOpen()) {
+        cwApi.customLibs.popoutHistory = [];
+        $(".popout .panel-previous").addClass("cw-hidden");
+      } else {
+        $(".popout .panel-previous").removeClass("cw-hidden");
+      }
+      let currentPopout = {
+        popOutName: diagramPopout,
+        id: cwObject.object_id,
+      };
+      if (
+        cwApi.customLibs.popoutHistory[0] === undefined ||
+        cwApi.customLibs.popoutHistory[0].popOutName !== currentPopout.popOutName ||
+        cwApi.customLibs.popoutHistory[0].id !== currentPopout.id
+      ) {
+        cwApi.customLibs.popoutHistory.unshift(currentPopout);
+      }
       jsonFile = cwApi.getObjectViewJsonUrl(diagramPopout, cwObject.object_id);
       cwApi.customLibs.popoutOpen = schema;
       cwAPI.cwTinymceManager.loadTinymce(function () {

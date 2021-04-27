@@ -172,13 +172,17 @@
         function (response, loginLoaded) {
           if (cwApi.statusIsKo(response)) {
             if (!loginLoaded) {
-              var unsetEditMode = source === editSource.ObjectPage && changeset.action !== cwApi.CwPendingChangeset.ActionType.Create;
-              handleSaveError(response, unsetEditMode, false);
+              try {
+                var unsetEditMode = source === editSource.ObjectPage && changeset.action !== cwApi.CwPendingChangeset.ActionType.Create;
+                handleSaveError(response, unsetEditMode, false);
 
-              if (changeset.action === cwApi.CwPendingChangeset.ActionType.Update) {
-                cwApi.notificationManager.addNotification($.i18n.prop("editmode_someOfTheChangesWereNotUpdated"), "error");
-              } else if (changeset.action === cwApi.CwPendingChangeset.ActionType.Create) {
-                cwApi.notificationManager.addNotification($.i18n.prop("editmode_thereWasAnIssueWhichMeansTheObjectWasNotCreated"), "error");
+                if (changeset.action === cwApi.CwPendingChangeset.ActionType.Update) {
+                  cwApi.notificationManager.addNotification($.i18n.prop("editmode_someOfTheChangesWereNotUpdated"), "error");
+                } else if (changeset.action === cwApi.CwPendingChangeset.ActionType.Create) {
+                  cwApi.notificationManager.addNotification($.i18n.prop("editmode_thereWasAnIssueWhichMeansTheObjectWasNotCreated"), "error");
+                }
+              } catch (e) {
+                document.location.reload();
               }
             }
           } else {
