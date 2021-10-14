@@ -1,10 +1,10 @@
 /* Copyright © 2012-2017 erwin, Inc. - All rights reserved */
 /*global cwAPI, jQuery*/
 
-(function(cwApi, $) {
+(function (cwApi, $) {
   "use strict";
 
-  var cwLayoutGrid = function(options, viewSchema) {
+  var cwLayoutGrid = function (options, viewSchema) {
     cwApi.extend(this, cwApi.cwLayouts.CwLayout, options, viewSchema);
 
     this.propertyManagers = {};
@@ -13,11 +13,11 @@
     this.viewSchema = viewSchema;
   };
 
-  cwLayoutGrid.prototype.applyJavaScript = function() {
+  cwLayoutGrid.prototype.applyJavaScript = function () {
     return undefined;
   };
 
-  cwLayoutGrid.prototype.getEditButton = function(trId, item) {
+  cwLayoutGrid.prototype.getEditButton = function (trId, item) {
     var o = [],
       link,
       $td,
@@ -35,11 +35,44 @@
     } else {
       link = cwApi.createLinkForSingleView(item.objectTypeScriptName, item);
     }
-    o.push('<a id="', trId, '-open" class="cw-grid-action-button cw-grid-action-button-open" href="', link, '" title="', $.i18n.prop("layoutGrid_openLink"), '"><i class="fa fa-folder-open"></i></a>');
+    o.push(
+      '<a id="',
+      trId,
+      '-open" class="cw-grid-action-button cw-grid-action-button-open" href="',
+      link,
+      '" title="',
+      $.i18n.prop("layoutGrid_openLink"),
+      '"><i class="fa fa-folder-open"></i></a>'
+    );
+
+    if (item.nodeID) {
+      let popOutName,
+        cds = this.viewSchema.NodesByID[item.nodeID].LayoutOptions.DisplayPropertyScriptName;
+      if (cwAPI.ViewSchemaManager.pageExists(cds)) {
+        popOutName = cds;
+      } else {
+        popOutName = cwApi.replaceSpecialCharacters(item.objectTypeScriptName) + "_diagram_popout";
+      }
+      if (cwAPI.ViewSchemaManager.pageExists(popOutName) === true) {
+        let p =
+          '<a id="' +
+          trId +
+          '-popout" class="cw-grid-action-button cw-grid-action-button-popout" onclick="cwAPI.customFunction.openDiagramPopoutWithID(' +
+          "'" +
+          item.object_id +
+          "','" +
+          popOutName +
+          "'" +
+          ')" title="Popout"><i class="fa fa-external-link"></i>' +
+          "</a>";
+        o.push(p);
+      }
+    }
+
     return o.join("");
   };
 
-  cwLayoutGrid.outputPropertiesGroups = function(output, schemaNode, item, propertyGroupContainer, outputMethod, objectTypeScriptName) {
+  cwLayoutGrid.outputPropertiesGroups = function (output, schemaNode, item, propertyGroupContainer, outputMethod, objectTypeScriptName) {
     var propertiesGroups, pg, propertiesLength, i, propertyScriptName;
     propertiesGroups = schemaNode[propertyGroupContainer];
     for (pg in propertiesGroups) {
@@ -53,7 +86,7 @@
     }
   };
 
-  cwLayoutGrid.prototype.drawOne = function(output, item) {
+  cwLayoutGrid.prototype.drawOne = function (output, item) {
     var trId, assoKey, asso, layout, schemaNode, propertyNodeId, i, property, value, pScriptname, nodeSchema, assoCount;
 
     schemaNode = this.viewSchema.NodesByID[this.nodeID];
@@ -61,13 +94,24 @@
     trId = "cw-grid-action-item-row-" + item.object_id;
     output.push("<tr id='", trId, "'>");
 
-    output.push('<td data-objecttype-scriptname="', item.objectTypeScriptName, '" data-item-id="', item.object_id, '">', this.getEditButton(trId, item), "</td>");
+    output.push(
+      '<td data-objecttype-scriptname="',
+      item.objectTypeScriptName,
+      '" data-item-id="',
+      item.object_id,
+      '">',
+      this.getEditButton(trId, item),
+      "</td>"
+    );
     for (propertyNodeId in schemaNode.PropertiesGroups) {
       if (schemaNode.PropertiesGroups.hasOwnProperty(propertyNodeId)) {
         for (i = 0; i < schemaNode.PropertiesGroups[propertyNodeId].properties.length; i += 1) {
           pScriptname = schemaNode.PropertiesGroups[propertyNodeId].properties[i];
           property = cwApi.mm.getProperty(item.objectTypeScriptName, pScriptname);
-          value = cwApi.isNull(item) || cwApi.isUndefined(item.properties) ? cwApi.cwPropertiesGroups.getDefaultValueForType(item.objectTypeScriptName, property.scriptName) : cwApi.cwPropertiesGroups.getValue(item.objectTypeScriptName, property, "properties", item);
+          value =
+            cwApi.isNull(item) || cwApi.isUndefined(item.properties)
+              ? cwApi.cwPropertiesGroups.getDefaultValueForType(item.objectTypeScriptName, property.scriptName)
+              : cwApi.cwPropertiesGroups.getValue(item.objectTypeScriptName, property, "properties", item);
           output.push("<td>", value, "</td>");
         }
       }
@@ -108,7 +152,7 @@
     outputTableHeaderColumn(o, property, pHtml);
   }
 
-  cwLayoutGrid.prototype.drawAssociations = function(output, associationTitleText, object, associationKey) {
+  cwLayoutGrid.prototype.drawAssociations = function (output, associationTitleText, object, associationKey) {
     /*jslint unparam:true*/
     var i, child, asso, schemaNode, objectId, associationTargetNode;
 
@@ -144,11 +188,24 @@
     output.push('<th class="cw-header" data-field="actions">', $.i18n.prop("grid_options"), "</th>");
 
     cwLayoutGrid.outputPropertiesGroups(output, schemaNode, null, "PropertiesGroups", outputNormalTableHeaderColumn, schemaNode.ObjectTypeScriptName);
-    cwLayoutGrid.outputPropertiesGroups(output, schemaNode, null, "iPropertiesGroups", outputIntersectionTableHeaderColumn, schemaNode.ObjectTypeScriptName);
+    cwLayoutGrid.outputPropertiesGroups(
+      output,
+      schemaNode,
+      null,
+      "iPropertiesGroups",
+      outputIntersectionTableHeaderColumn,
+      schemaNode.ObjectTypeScriptName
+    );
 
     for (asso in schemaNode.AssociationsTargetObjectTypes) {
       if (schemaNode.AssociationsTargetObjectTypes.hasOwnProperty(asso)) {
-        output.push('<th class="cw-header cw-grid-association-header" data-field="', asso, '">', schemaNode.AssociationsTargetObjectTypes[asso].displayNodeName, "</th>");
+        output.push(
+          '<th class="cw-header cw-grid-association-header" data-field="',
+          asso,
+          '">',
+          schemaNode.AssociationsTargetObjectTypes[asso].displayNodeName,
+          "</th>"
+        );
       }
     }
     output.push("</tr></thead>");
