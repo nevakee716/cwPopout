@@ -246,7 +246,7 @@
       changeset.mandatoryValueChange.buildUnsetMandatoryValuesMessage(output, false, changeset.associationChanges.length);
       outputChanges(output.join(""));
     } else if (changeset.hasChanges()) {
-      viewName = this.item.objectTypeScriptName;
+      viewName = cwApi.replaceSpecialCharacters(this.item.objectTypeScriptName);
       changeset.fetchAndUpdateWithApprovers(viewName, createSourceObjectId, function () {
         output.push(changeset.toChangeSummaryHtml());
         outputChanges(output.join(""));
