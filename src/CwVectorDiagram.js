@@ -67,7 +67,7 @@
 
     if (items.objectTypeScriptName === "diagram") {
       $container = cwVectorDiagram.getDiagramContainerZone(items.object_id, newLayoutId);
-      cwAPI.customLibs.diagramViewerByNodeIDAndID[items.nodeID + "_" + items.object_id] = loadVectorDiagram($container, items);
+      cwAPI.customLibs.diagramViewerByNodeIDAndID[items.nodeID + "-" + items.object_id] = loadVectorDiagram($container, items);
       return;
     }
     if (items.hasOwnProperty("associations")) items = items.associations;
@@ -79,7 +79,7 @@
 
       if (items.nodeID === properties.NodeID) {
         $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
-        cwAPI.customLibs.diagramViewerByNodeIDAndID[items.nodeID + "_" + rootItem.object_id] = loadVectorDiagram($container, rootItem);
+        cwAPI.customLibs.diagramViewerByNodeIDAndID[items.nodeID + "-" + rootItem.object_id] = loadVectorDiagram($container, rootItem);
       } else {
         if (items.associations === undefined) items.associations = items;
         if (items.associations[properties.NodeID] != undefined && items.associations[properties.NodeID].length > 0) {
@@ -87,7 +87,7 @@
             rootItem = items.associations[properties.NodeID][i];
             $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
             $container.closest("div.popout .cwLayoutList").css("width", "100%");
-            cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.NodeID + "_" + rootItem.object_id] = loadVectorDiagram($container, rootItem);
+            cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.NodeID + "-" + rootItem.object_id] = loadVectorDiagram($container, rootItem);
           }
         } else {
           // allow to load diagram in lower level
@@ -97,7 +97,7 @@
               rootItem = items.associations[properties.NodeID][i];
               $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
               $container.closest("div.popout .cwLayoutList").css("width", "100%");
-              cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.NodeID + "_" + rootItem.object_id] = loadVectorDiagram($container, rootItem);
+              cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.NodeID + "-" + rootItem.object_id] = loadVectorDiagram($container, rootItem);
             }
           }
         }
@@ -108,7 +108,7 @@
       for (let i = 0; i < items.length; i += 1) {
         rootItem = items[i];
         $container = cwVectorDiagram.getDiagramContainerZone(rootItem.object_id, newLayoutId);
-        loadVectorDiagram($container, rootItem);
+        cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.NodeID + "-"] = loadVectorDiagram($container, rootItem);
       }
     }
   };
@@ -181,17 +181,22 @@
 
       updateRootItem(automaticDiagramProperties, properties.LayoutOptions);
 
-      cwAPI.customLibs.diagramViewerByNodeIDAndID[
-        properties.LayoutOptions.LayoutID + "_" + automaticDiagramProperties.rootItem.object_id
-      ] = loadAutomaticDiagram($container, automaticDiagramProperties, function (err, dv) {
-        colorizeHeatMap(dv, allItems, automaticDiagramProperties);
-      });
+      cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.LayoutOptions.LayoutID + "-" + automaticDiagramProperties.rootItem.object_id] =
+        loadAutomaticDiagram($container, automaticDiagramProperties, function (err, dv) {
+          colorizeHeatMap(dv, allItems, automaticDiagramProperties);
+        });
+      cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.LayoutOptions.NodeID + "-" + properties.LayoutOptions.LayoutID] =
+        cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.LayoutOptions.LayoutID + "-" + automaticDiagramProperties.rootItem.object_id];
     } else {
       // index page
       for (i = 0; i < allItems[properties.NodeID].length; i += 1) {
         automaticDiagramProperties.rootItem = allItems[properties.NodeID][i];
         $container = $("#cw-diagram-zone-" + automaticDiagramProperties.rootItem.object_id + "-" + newLayoutId);
-        loadAutomaticDiagram($container, automaticDiagramProperties);
+
+        cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.LayoutOptions.LayoutID + "-" + automaticDiagramProperties.rootItem.object_id] =
+          loadAutomaticDiagram($container, automaticDiagramProperties);
+        cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.LayoutOptions.NodeID + "-" + properties.LayoutOptions.LayoutID] =
+          cwAPI.customLibs.diagramViewerByNodeIDAndID[properties.LayoutOptions.LayoutID + "-" + automaticDiagramProperties.rootItem.object_id];
       }
     }
   };
