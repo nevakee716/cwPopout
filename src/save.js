@@ -247,11 +247,10 @@
       outputChanges(output.join(""));
     } else if (changeset.hasChanges()) {
       viewName = cwApi.replaceSpecialCharacters(this.item.objectTypeScriptName);
-      changeset.fetchAndUpdateWithApprovers(viewName, createSourceObjectId, function () {
-        output.push(changeset.toChangeSummaryHtml());
-        outputChanges(output.join(""));
-        cwApi.CwEditSubmit.outputSubmit(source, submitMethod);
-      });
+      changeset.approverList = [];
+      output.push(changeset.toChangeSummaryHtml());
+      outputChanges(output.join(""));
+      cwApi.CwEditSubmit.outputSubmit(source, submitMethod);
     } else {
       if (!cwApi.isUndefinedOrNull(callback) && cwApi.isFunction(callback)) {
         return callback();
