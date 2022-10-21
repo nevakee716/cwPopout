@@ -24,6 +24,9 @@
     cwApi.getViewsSchemas = function () {
       return that.schemas;
     };
+    cwApi.addCustomFieldOnSchema = function (fieldName, value) {
+      that.schemas[fieldName] = value;
+    };
 
     function loadSchema(callback) {
       if (cwApi.isModelSelectionPage() === false) {
@@ -39,6 +42,7 @@
         $.getJSON(url, function (schema) {
           that.schemas = schema.Schema;
           cwApi.cwConfigs.Pages = schema.Pages;
+          cwApi.cwViewManager.generateViewsById();
           cwApi.cwConfigs.MenuLinks = schema.MenuLinks;
           return callback && callback();
         });
